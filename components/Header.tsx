@@ -7,7 +7,7 @@ const links = [
   { href: "#contact", label: "Contact" },
 ];
 
-export function NavBar() {
+export function Header() {
   return (
     <header className="sticky top-0 z-20 backdrop-blur-lg bg-white/70 border-b border-slate-200">
       <div className="container flex items-center justify-between py-8">
@@ -21,12 +21,6 @@ export function NavBar() {
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold gradient-cta shadow-sm transition hover:brightness-110"
-        >
-          Get a quote
-        </a>
       </div>
     </header>
   );

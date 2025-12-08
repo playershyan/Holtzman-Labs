@@ -5,7 +5,6 @@ export function SpeedSection() {
     <Section>
       <div className="container grid gap-8 lg:grid-cols-[1.2fr_0.8fr] items-start">
         <div className="space-y-4">
-          <p className="tag">Why speed matters</p>
           <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">
             Launch fast. Capture opportunity.
           </h2>

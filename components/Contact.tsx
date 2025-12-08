@@ -39,13 +39,12 @@ export function Contact() {
     <Section id="contact">
       <div className="container grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-3">
-          <p className="tag">Let&apos;s build something</p>
           <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">Tell me about your project</h2>
           <p className="text-lg text-slate-700">
             I respond within one business day. Please include your business type and ideal timeline.
           </p>
           <div className="space-y-2 text-sm text-slate-700">
-            <p>Email: colomboshyan@gmail.com</p>
+            <p>Email: playershyan@gmail.com</p>
             <p>Phone: 0783607777</p>
           </div>
         </div>

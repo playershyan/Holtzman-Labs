@@ -1,19 +1,16 @@
 export function Hero() {
   return (
-    <div className="container pt-12 pb-16 sm:pt-16 sm:pb-24">
-      <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
-        <div className="space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-200 shadow-sm">
-            Fast delivery · Modern stacks · Sri Lanka
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-slate-900">
+    <div className="container pt-32 pb-16 sm:pt-40 sm:pb-24">
+      <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
+        <div className="pt-8">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-slate-900 mb-6">
             Hi, I&apos;m Shyan Akarsha, founder of Holtzman Labs.
           </h1>
-          <p className="text-lg sm:text-xl text-slate-700 max-w-2xl">
+          <p className="text-lg sm:text-xl text-slate-700 max-w-2xl mb-6">
             I build modern websites—fast. Most projects delivered in 1-2 weeks with clear
             communication and clear agreements.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
             <a
               href="#work"
               className="inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold gradient-cta shadow-md transition hover:brightness-110"
@@ -32,7 +29,7 @@ export function Hero() {
             <span className="tag">Next.js + Tailwind</span>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative pt-8">
           <div className="card p-6 sm:p-8 bg-white/90">
             <p className="text-sm font-semibold text-slate-700 mb-4">Why clients choose speed</p>
             <p className="text-lg text-slate-800 leading-relaxed">

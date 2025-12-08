@@ -5,7 +5,6 @@ export function About() {
     <Section id="about">
       <div className="container grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
         <div className="space-y-4">
-          <p className="tag">Who I am</p>
           <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">A developer who keeps agreements clear.</h2>
           <p className="text-lg text-slate-700 leading-relaxed">
             I&apos;m a law student with a passion for building digital solutions. I understand both code and the language of agreements—uncommon for developers. This means I can translate business requirements into technical solutions while keeping expectations documented and clear.

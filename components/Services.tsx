@@ -20,7 +20,6 @@ export function Services() {
     <Section id="services">
       <div className="container space-y-8">
         <div className="flex flex-col gap-3">
-          <p className="tag">What I build</p>
           <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">Services</h2>
           <p className="text-lg text-slate-700 max-w-3xl">
             From fast marketing sites to custom platforms. Every engagement includes responsive design,
