@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { EmailTemplate } from "@/components/email-template";
 
 const resendApiKey = process.env.RESEND_API_KEY;
 const contactEmail = process.env.CONTACT_EMAIL;
@@ -27,23 +28,20 @@ export async function POST(request: Request) {
     }
 
     const subject = `New inquiry from ${name}`;
-    const text = `Name: ${name}
-Email: ${email}
-Project Type: ${projectType}
 
-Message:
-${message}
-`;
-
-    await resend.emails.send({
-      from: "Holtzman Labs <noreply@holtzmanlabs.lk>",
+    const { data, error } = await resend.emails.send({
+      from: "Holtzman Labs <onboarding@resend.dev>",
       to: contactEmail,
       replyTo: email,
       subject,
-      text,
+      react: EmailTemplate({ name, email, projectType, message }),
     });
 
-    return NextResponse.json({ success: true });
+    if (error) {
+      return NextResponse.json({ error }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true, data });
   } catch (error) {
     console.error("[contact] error", error);
     return NextResponse.json({ error: "Unable to send message right now." }, { status: 500 });

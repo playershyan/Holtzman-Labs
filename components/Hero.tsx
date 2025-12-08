@@ -30,7 +30,6 @@ export function Hero() {
           <div className="flex flex-wrap gap-3 text-sm text-slate-600">
             <span className="tag">1-2 week delivery</span>
             <span className="tag">Next.js + Tailwind</span>
-            <span className="tag">Legal-friendly contracts</span>
           </div>
         </div>
         <div className="relative">

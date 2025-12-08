@@ -45,8 +45,8 @@ export function Contact() {
             I respond within one business day. Please include your business type and ideal timeline.
           </p>
           <div className="space-y-2 text-sm text-slate-700">
-            <p>Email: shyan@holtzmanlabs.lk</p>
-            <p>LinkedIn: <a className="text-blue-700 font-semibold" href="https://www.linkedin.com" target="_blank" rel="noreferrer">View profile</a></p>
+            <p>Email: colomboshyan@gmail.com</p>
+            <p>Phone: 0783607777</p>
           </div>
         </div>
 

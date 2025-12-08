@@ -6,7 +6,7 @@ const projects = [
     title: "Vera.lk",
     description: "Complete vehicle marketplace platform with AI-powered search.",
     tech: "Next.js · PostgreSQL · AI search",
-    timeline: "Built in X weeks",
+    timeline: "",
     link: "https://vera.lk",
     linkLabel: "View site",
     image:
@@ -24,12 +24,14 @@ const projects = [
       "https://api.microlink.io/?url=https%3A%2F%2Fi-safe-okm6jbh47-shyans-projects-7b2901b0.vercel.app%2Fen&meta=false&screenshot=true&embed=screenshot.url",
   },
   {
-    title: "Client Platform",
-    description: "Space reserved for upcoming client work. Ready to add your project here.",
-    tech: "Customizable",
-    timeline: "TBD",
-    link: "#",
-    linkLabel: "Coming soon",
+    title: "Aurium.lk (demo)",
+    description: "Modern e-commerce platform for jewelry and accessories with elegant design.",
+    tech: "Next.js · E-commerce",
+    timeline: "Demo project",
+    link: "https://aurium-k120je06u-shyans-projects-7b2901b0.vercel.app/",
+    linkLabel: "Live preview",
+    image:
+      "https://api.microlink.io/?url=https%3A%2F%2Faurium-k120je06u-shyans-projects-7b2901b0.vercel.app%2F&meta=false&screenshot=true&embed=screenshot.url",
   },
 ];
 
