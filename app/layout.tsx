@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 const siteDescription =
-  "Fast, modern websites for Sri Lankan businesses by Shyan Akarsha. Most projects delivered in 1-2 weeks.";
+  "Fast, modern websites delivered quickly by Shyan Akarsha. Most projects delivered in 1-2 weeks.";
 
 export const metadata: Metadata = {
   metadataBase:
@@ -24,24 +24,17 @@ export const metadata: Metadata = {
     new URL(process.env.NEXT_PUBLIC_SITE_URL),
   title: `${BRAND} | Fast, modern websites in Sri Lanka`,
   description: siteDescription,
-  keywords: [
-    "Shyan Akarsha",
-    "Akarsha Labs",
-    "web developer Sri Lanka",
-    "Next.js",
-    "fast websites",
-    "law student developer",
-  ],
+  keywords: ["Shyan Akarsha", "Holtzman Labs", "web developer", "Next.js", "fast websites"],
   openGraph: {
-    title: `${BRAND} | Fast, modern websites in Sri Lanka`,
+    title: `${BRAND} | Fast, modern websites`,
     description: siteDescription,
-    locale: "en_LK",
+    locale: "en",
     type: "website",
     siteName: BRAND,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${BRAND} | Fast, modern websites in Sri Lanka`,
+    title: `${BRAND} | Fast, modern websites`,
     description: siteDescription,
   },
 };

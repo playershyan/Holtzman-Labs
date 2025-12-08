@@ -6,21 +6,19 @@ export function About() {
       <div className="container grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
         <div className="space-y-4">
           <p className="tag">Who I am</p>
-          <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">A developer who knows contracts.</h2>
+          <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">A developer who keeps agreements clear.</h2>
           <p className="text-lg text-slate-700 leading-relaxed">
-            I&apos;m a law student at the University of Peradeniya with a passion for building digital
-            solutions. I understand both code and contracts—rare for developers. This means I can translate
-            business requirements into technical solutions while understanding the legal implications.
+            I&apos;m a law student with a passion for building digital solutions. I understand both code and the language of agreements—uncommon for developers. This means I can translate business requirements into technical solutions while keeping expectations documented and clear.
           </p>
           <p className="text-lg text-slate-700 leading-relaxed">
-            I work with businesses across Sri Lanka, delivering modern web solutions that actually drive results.
+            I collaborate with businesses to deliver modern web solutions that actually drive results.
           </p>
         </div>
         <div className="card p-6 space-y-4 bg-white/90">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-semibold text-slate-700">Based in</p>
-              <p className="text-lg font-semibold text-slate-900">Sri Lanka</p>
+              <p className="text-lg font-semibold text-slate-900">Remote</p>
             </div>
             <div className="text-right">
               <p className="text-sm font-semibold text-slate-700">Typical delivery</p>

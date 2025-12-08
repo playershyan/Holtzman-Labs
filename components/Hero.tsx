@@ -10,8 +10,8 @@ export function Hero() {
             Hi, I&apos;m Shyan Akarsha, founder of Holtzman Labs.
           </h1>
           <p className="text-lg sm:text-xl text-slate-700 max-w-2xl">
-            I build modern websites for Sri Lankan businesses—fast. Most projects delivered in 1-2
-            weeks with clear communication and contract-ready documentation.
+            I build modern websites—fast. Most projects delivered in 1-2 weeks with clear
+            communication and clear agreements.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a

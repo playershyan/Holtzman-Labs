@@ -38,8 +38,8 @@ export function Portfolio() {
     <Section id="work">
       <div className="container space-y-8">
         <div className="flex flex-col gap-3">
-          <p className="tag">Recent work</p>
-          <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">Recent Work</h2>
+          <p className="tag">Highlight projects</p>
+          <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">Highlight Projects</h2>
           <p className="text-lg text-slate-700 max-w-3xl">
             Fast delivery without sacrificing quality. Each build is optimized for speed, clarity,
             and measurable results.

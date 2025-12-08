@@ -10,7 +10,7 @@ const links = [
 export function NavBar() {
   return (
     <header className="sticky top-0 z-20 backdrop-blur-lg bg-white/70 border-b border-slate-200">
-      <div className="container flex items-center justify-between py-4">
+      <div className="container flex items-center justify-between py-8">
         <Link href="/" className="text-lg font-semibold tracking-tight text-slate-900">
           Holtzman Labs
         </Link>
@@ -23,7 +23,7 @@ export function NavBar() {
         </nav>
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center rounded-full px-4 py-2 text-sm font-semibold gradient-cta shadow-sm transition hover:brightness-110"
+          className="hidden md:inline-flex items-center rounded-full px-5 py-3 text-sm font-semibold gradient-cta shadow-sm transition hover:brightness-110"
         >
           Get a quote
         </a>

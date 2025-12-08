@@ -10,16 +10,16 @@ export function SpeedSection() {
             Launch fast. Capture opportunity.
           </h2>
           <p className="text-lg text-slate-700 leading-relaxed">
-            Your competitors are online. Every week without a modern website is lost business. I
-            ship quickly without compromising quality—combining technical expertise with an
-            understanding of business needs.
+            Your competitors are online. Every week without a web presence is lost business. I ship
+            quickly without compromising quality—combining technical expertise with an understanding
+            of business needs.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {[
             { title: "Performance first", body: "Optimized images, fonts, and code paths for 95+ Lighthouse." },
             { title: "Built to convert", body: "Clear CTAs, SEO-ready metadata, and mobile-first layouts." },
-            { title: "Contract ready", body: "You get timelines, scope, and agreements crafted with legal clarity." },
+            { title: "Clarity by design", body: "You get timelines, scope, and expectations documented upfront." },
             { title: "No fluff", body: "Lean stack, minimal JS, and fast hosting on Vercel." },
           ].map((item) => (
             <div key={item.title} className="card p-5">
