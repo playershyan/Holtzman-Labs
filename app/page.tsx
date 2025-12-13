@@ -14,8 +14,8 @@ export default function Home() {
       <main>
         <Hero />
         <SpeedSection />
-        <Portfolio />
         <Services />
+        <Portfolio />
         <About />
         <Contact />
       </main>

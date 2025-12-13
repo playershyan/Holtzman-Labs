@@ -4,6 +4,7 @@
   --sand: #f8fafc;
   --charcoal: #0f172a;
   --accent: #f97316;
+  --accent-hover: #ea580c;
 }
 
 @theme inline {
@@ -38,7 +39,7 @@ body {
 }
 
 .gradient-cta {
-  background: linear-gradient(135deg, #1e3a8a, #2563eb, #22d3ee);
+  background: linear-gradient(135deg, #f97316, #ea580c, #fb923c);
   color: #fff;
 }
 

@@ -16,17 +16,27 @@ const geistMono = Geist_Mono({
 });
 
 const siteDescription =
-  "Fast, modern websites delivered quickly by Shyan Akarsha. Most projects delivered in 1-2 weeks.";
+  "Professional websites for law firms, dental practices, restaurants, and local businesses in Sri Lanka. Build trust, reach more customers, and grow your business online. Delivered in 1-2 weeks.";
 
 export const metadata: Metadata = {
   metadataBase:
     process.env.NEXT_PUBLIC_SITE_URL &&
     new URL(process.env.NEXT_PUBLIC_SITE_URL),
-  title: `${BRAND} | Fast, modern websites in Sri Lanka`,
+  title: `${BRAND} | Professional Websites for Sri Lankan Businesses`,
   description: siteDescription,
-  keywords: ["Shyan Akarsha", "Holtzman Labs", "web developer", "Next.js", "fast websites"],
+  keywords: [
+    "website design Sri Lanka",
+    "web developer Sri Lanka",
+    "business website",
+    "law firm website",
+    "dental practice website",
+    "restaurant website",
+    "local business website",
+    "professional website",
+    "Holtzman Labs",
+  ],
   openGraph: {
-    title: `${BRAND} | Fast, modern websites`,
+    title: `${BRAND} | Professional Websites for Sri Lankan Businesses`,
     description: siteDescription,
     locale: "en",
     type: "website",
@@ -34,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${BRAND} | Fast, modern websites`,
+    title: `${BRAND} | Professional Websites for Sri Lankan Businesses`,
     description: siteDescription,
   },
 };
@@ -44,16 +54,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const personSchema = {
+  const businessSchema = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Shyan Akarsha",
-    jobTitle: "Founder, Akarsha Labs",
+    "@type": "ProfessionalService",
+    name: "Holtzman Labs",
     description: siteDescription,
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "Sri Lanka",
+    founder: {
+      "@type": "Person",
+      name: "Shyan Akarsha",
     },
+    areaServed: {
+      "@type": "Country",
+      name: "Sri Lanka",
+    },
+    serviceType: "Website Development",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
   };
 
@@ -65,7 +79,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           suppressHydrationWarning
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
         />
         {children}
       </body>
