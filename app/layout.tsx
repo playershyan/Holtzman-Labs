@@ -16,17 +16,17 @@ const geistMono = Geist_Mono({
 });
 
 const siteDescription =
-  "Professional websites for law firms, dental practices, restaurants, and local businesses in Sri Lanka. Build trust, reach more customers, and grow your business online. Delivered in 1-2 weeks.";
+  "Professional websites for law firms, dental practices, restaurants, and local businesses. Build trust, reach more customers, and grow your business online. Delivered in 1-2 weeks.";
 
 export const metadata: Metadata = {
   metadataBase:
     process.env.NEXT_PUBLIC_SITE_URL &&
     new URL(process.env.NEXT_PUBLIC_SITE_URL),
-  title: `${BRAND} | Professional Websites for Sri Lankan Businesses`,
+  title: `${BRAND} | Professional Websites for Your Business`,
   description: siteDescription,
   keywords: [
-    "website design Sri Lanka",
-    "web developer Sri Lanka",
+    "website design",
+    "web developer",
     "business website",
     "law firm website",
     "dental practice website",
@@ -34,9 +34,10 @@ export const metadata: Metadata = {
     "local business website",
     "professional website",
     "Holtzman Labs",
+    "small business web design",
   ],
   openGraph: {
-    title: `${BRAND} | Professional Websites for Sri Lankan Businesses`,
+    title: `${BRAND} | Professional Websites for Your Business`,
     description: siteDescription,
     locale: "en",
     type: "website",
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${BRAND} | Professional Websites for Sri Lankan Businesses`,
+    title: `${BRAND} | Professional Websites for Your Business`,
     description: siteDescription,
   },
 };
@@ -62,10 +63,6 @@ export default function RootLayout({
     founder: {
       "@type": "Person",
       name: "Shyan Akarsha",
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "Sri Lanka",
     },
     serviceType: "Website Development",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",

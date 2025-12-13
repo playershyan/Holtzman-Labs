@@ -6,10 +6,10 @@ export function About() {
       <div className="container grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
         <div className="space-y-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-            Simple, Honest Web Development for Sri Lankan Businesses
+            Simple, Honest Web Development for Your Business
           </h2>
           <p className="text-lg text-slate-700 leading-relaxed">
-            Hi, I&apos;m Shyan. I help local businesses get online with professional websites that actually bring in customers.
+            Hi, I&apos;m Shyan. I help businesses get online with professional websites that actually bring in customers.
           </p>
           <p className="text-lg text-slate-700 leading-relaxed">
             No confusing technical jargon. No endless delays. Just clear communication, fair pricing, and websites delivered in 1-2 weeks that you can be proud to share with your customers.
@@ -68,10 +68,10 @@ export function About() {
 
           <div className="card p-6 bg-gradient-to-br from-slate-50 to-white">
             <div className="text-center">
-              <p className="text-sm font-semibold text-slate-700 mb-2">Based in Sri Lanka</p>
-              <p className="text-lg font-bold text-slate-900 mb-3">Serving Businesses Nationwide</p>
+              <p className="text-sm font-semibold text-slate-700 mb-2">Working Remotely</p>
+              <p className="text-lg font-bold text-slate-900 mb-3">Serving Businesses Worldwide</p>
               <p className="text-xs text-slate-600">
-                Working remotely means lower costs for you and flexible communication that fits your schedule
+                Remote work means lower costs for you and flexible communication that fits your schedule, no matter where you are
               </p>
             </div>
           </div>
