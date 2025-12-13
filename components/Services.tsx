@@ -11,7 +11,7 @@ const services = [
       "Secure contact forms",
       "Mobile-friendly design"
     ],
-    price: "Starting at 100,000 LKR"
+    price: "Starting at $500"
   },
   {
     icon: "🦷",
@@ -23,7 +23,7 @@ const services = [
       "Appointment request forms",
       "Before/after galleries"
     ],
-    price: "Starting at 90,000 LKR"
+    price: "Starting at $450"
   },
   {
     icon: "🍽️",
@@ -35,7 +35,7 @@ const services = [
       "Hours & location map",
       "Online ordering (if needed)"
     ],
-    price: "Starting at 80,000 LKR"
+    price: "Starting at $400"
   },
   {
     icon: "🏪",
@@ -47,7 +47,7 @@ const services = [
       "Contact & directions",
       "Special offers section"
     ],
-    price: "Starting at 85,000 LKR"
+    price: "Starting at $425"
   },
   {
     icon: "🏋️",
@@ -59,7 +59,7 @@ const services = [
       "Membership pricing",
       "Sign-up forms"
     ],
-    price: "Starting at 95,000 LKR"
+    price: "Starting at $475"
   },
   {
     icon: "✨",
@@ -71,7 +71,7 @@ const services = [
       "Booking information",
       "Staff introductions"
     ],
-    price: "Starting at 85,000 LKR"
+    price: "Starting at $425"
   },
 ];
 
@@ -82,7 +82,7 @@ export function Services() {
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Who I Help</h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            I specialize in building websites for local businesses across Sri Lanka. Here&apos;s what I can create for you:
+            I specialize in building websites for local businesses. Here&apos;s what I can create for you:
           </p>
         </div>
 

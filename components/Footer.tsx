@@ -8,7 +8,7 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-slate-900 mb-3">Holtzman Labs</h3>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Professional websites for Sri Lankan businesses. Fast delivery, clear pricing, no technical jargon.
+              Professional websites for businesses worldwide. Fast delivery, clear pricing, no technical jargon.
             </p>
           </div>
           <div>
