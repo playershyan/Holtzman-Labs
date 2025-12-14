@@ -6,7 +6,7 @@ export function About() {
       <div className="container grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
         <div className="space-y-6">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-            Simple, Honest Web Development for Your Business
+            Simple, yet effective Web Development for Your Business
           </h2>
           <p className="text-lg text-slate-700 leading-relaxed">
             Hi, I&apos;m Shyan. I help businesses get online with professional websites that actually bring in customers.
