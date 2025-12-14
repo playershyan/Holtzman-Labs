@@ -31,11 +31,11 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-slate-900 mb-3 text-sm">Get in Touch</h4>
             <div className="flex flex-col gap-2 text-sm text-slate-600">
-              <a href="mailto:playershyan@gmail.com" className="hover:text-slate-900 transition-colors">
-                playershyan@gmail.com
+              <a href="mailto:info@holtzmanlabs.com" className="text-sm text-blue-700 hover:text-blue-900 font-medium">
+                      shyan@holtzmanlabs.com
               </a>
-              <a href="tel:0783607777" className="hover:text-slate-900 transition-colors">
-                078 360 7777
+              <a href="tel:0704379967" className="hover:text-slate-900 transition-colors">
+                070 437 9967
               </a>
               <p className="text-xs mt-2">Response within 1 business day</p>
             </div>

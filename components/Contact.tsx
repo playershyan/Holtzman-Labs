@@ -65,7 +65,7 @@ export function Contact() {
                   <span className="text-2xl">📱</span>
                   <div>
                     <p className="text-xs font-semibold text-slate-600 mb-1">Phone/WhatsApp</p>
-                    <a href="tel:0783607777" className="text-sm text-blue-700 hover:text-blue-900 font-medium">
+                    <a href="tel:0704379967" className="text-sm text-blue-700 hover:text-blue-900 font-medium">
                       070 437 9967
                     </a>
                   </div>
