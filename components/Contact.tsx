@@ -57,7 +57,7 @@ export function Contact() {
                   <div>
                     <p className="text-xs font-semibold text-slate-600 mb-1">Email</p>
                     <a href="mailto:info@holtzmanlabs.com" className="text-sm text-blue-700 hover:text-blue-900 font-medium">
-                      playershyan@gmail.com
+                      shyan@holtzmanlabs.com
                     </a>
                   </div>
                 </div>
