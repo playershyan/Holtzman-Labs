@@ -1,11 +1,9 @@
-import { About } from "@/components/About";
-import { Contact } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
-import { Header } from "@/components/Header";
-import { Portfolio } from "@/components/Portfolio";
-import { Services } from "@/components/Services";
-import { SpeedSection } from "@/components/SpeedSection";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import ViewWork from "@/components/ViewWork";
+import WhyHoltzmanLabs from "@/components/WhyHoltzmanLabs";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,11 +11,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <SpeedSection />
         <Services />
-        <Portfolio />
-        <About />
-        <Contact />
+        <ViewWork />
+        <WhyHoltzmanLabs />
       </main>
       <Footer />
     </div>
