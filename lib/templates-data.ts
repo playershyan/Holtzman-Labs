@@ -162,4 +162,118 @@ export const templates: Template[] = [
     previewImage: "/templates/lawfirm-preview.jpg",
     demoUrl: "https://demo.holtzmanlabs.com/lawfirm",
   },
+  {
+    id: "gym-demo-2-ten",
+    title: "Gym Demo 2 - Ten",
+    shortDescription:
+      "Modern fitness website with dynamic design and energy-focused layout.",
+    fullDescription:
+      "A vibrant fitness website designed to motivate and inspire. Features class schedules, trainer profiles, and membership information. Perfect for gyms and fitness studios looking to attract new members.",
+    businessTypes: ["Fitness & Gym"],
+    features: [
+      "Class schedule display",
+      "Trainer profiles",
+      "Membership plans",
+      "Success stories",
+      "Contact form",
+      "Mobile-responsive design",
+    ],
+    previewImage: "https://gym-demo-2-ten.vercel.app/api/og",
+    demoUrl: "https://gym-demo-2-ten.vercel.app",
+  },
+  {
+    id: "gym-demo-1-tau",
+    title: "Gym Demo 1 - Tau",
+    shortDescription:
+      "Professional fitness website with clean design and comprehensive features.",
+    fullDescription:
+      "A professional fitness website that showcases your gym's offerings. Includes class schedules, trainer information, and membership details. Ideal for fitness centers and personal training studios.",
+    businessTypes: ["Fitness & Gym"],
+    features: [
+      "Class schedules",
+      "Trainer bios",
+      "Membership information",
+      "Testimonials",
+      "Contact form",
+      "Responsive layout",
+    ],
+    previewImage: "https://gym-demo-1-tau.vercel.app/api/og",
+    demoUrl: "https://gym-demo-1-tau.vercel.app",
+  },
+  {
+    id: "gym-demo-3-teal",
+    title: "Gym Demo 3 - Teal",
+    shortDescription:
+      "Energetic fitness website with bold design and engaging content.",
+    fullDescription:
+      "An energetic fitness website designed to capture attention and drive conversions. Features dynamic layouts, class information, and membership options. Perfect for modern gyms and fitness facilities.",
+    businessTypes: ["Fitness & Gym"],
+    features: [
+      "Dynamic class displays",
+      "Trainer showcases",
+      "Membership plans",
+      "Success galleries",
+      "Booking system",
+      "Modern design",
+    ],
+    previewImage: "https://gym-demo-3-teal.vercel.app/api/og",
+    demoUrl: "https://gym-demo-3-teal.vercel.app",
+  },
+  {
+    id: "aurium-one",
+    title: "Aurium One",
+    shortDescription:
+      "Premium professional services website with elegant design.",
+    fullDescription:
+      "A sophisticated website for professional services and consulting. Features service showcases, team profiles, and client testimonials. Ideal for consultants, agencies, and professional service providers.",
+    businessTypes: ["Professional Services", "Consulting"],
+    features: [
+      "Service pages",
+      "Team profiles",
+      "Case studies",
+      "Client testimonials",
+      "Contact forms",
+      "Professional design",
+    ],
+    previewImage: "https://aurium-one.vercel.app/api/og",
+    demoUrl: "https://aurium-one.vercel.app",
+  },
+  {
+    id: "restaurant-demo-1-alpha",
+    title: "Restaurant Demo 1 - Alpha",
+    shortDescription:
+      "Elegant restaurant website with menu showcase and reservation system.",
+    fullDescription:
+      "A beautiful restaurant website designed to showcase your culinary offerings. Features interactive menus, photo galleries, and reservation capabilities. Perfect for fine dining establishments and cafes.",
+    businessTypes: ["Restaurant"],
+    features: [
+      "Interactive menu",
+      "Photo galleries",
+      "Reservation system",
+      "Location information",
+      "Contact form",
+      "Elegant design",
+    ],
+    previewImage: "https://restaurant-demo-1-alpha.vercel.app/api/og",
+    demoUrl: "https://restaurant-demo-1-alpha.vercel.app",
+  },
+  {
+    id: "restaurant-demo-2-umber",
+    title: "Restaurant Demo 2 - Umber",
+    shortDescription:
+      "Modern restaurant website with warm design and comprehensive features.",
+    fullDescription:
+      "A modern restaurant website that creates an inviting online presence. Features menu displays, location details, and booking options. Ideal for restaurants looking to attract diners and showcase their offerings.",
+    businessTypes: ["Restaurant"],
+    features: [
+      "Menu displays",
+      "Gallery sections",
+      "Booking system",
+      "Hours and location",
+      "Contact information",
+      "Warm design aesthetic",
+    ],
+    previewImage: "https://restaurant-demo-2-umber.vercel.app/api/og",
+    demoUrl: "https://restaurant-demo-2-umber.vercel.app",
+  },
 ];

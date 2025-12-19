@@ -14,7 +14,8 @@ export default function CategoryTabs({
   activeCategory,
   onCategoryChange,
 }: CategoryTabsProps) {
-  const tabs = ["All", ...BUSINESS_TYPES];
+  // Temporarily disable all filters except "All"
+  const tabs = ["All"]; // ...BUSINESS_TYPES];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(false);
