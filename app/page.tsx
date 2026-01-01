@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Impact from "@/components/Impact";
+import EngineRoom from "@/components/EngineRoom";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,8 +9,7 @@ export default function Home() {
       <Header />
       <main id="main-content" role="main" tabIndex={-1}>
         <Hero />
-        <Services />
-        <Impact />
+        <EngineRoom />
 
         {/* Single action bar — concise next step */}
         <section className="px-6 py-12 md:px-16 lg:px-24 bg-gradient-to-r from-[#f8f5ff] to-white">

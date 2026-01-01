@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({ hideDesktopNav = false }: { hideDesktopNav?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -16,8 +16,9 @@ export default function Header() {
           <span>Holtzman Labs</span>
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden items-center gap-6 text-sm md:text-base text-neutral-600 sm:flex">
+        {/* Desktop nav (can be hidden on some pages like Home) */}
+        {!hideDesktopNav && (
+          <nav className="hidden items-center gap-6 text-sm md:text-base text-neutral-600 sm:flex">
           <Link href="/" className="hover:text-[#8B5CF6] transition-colors">
             Home
           </Link>
@@ -25,6 +26,11 @@ export default function Header() {
           <Link href="/playground" className="hover:text-[#8B5CF6] transition-colors">
             Playground
           </Link>
+
+          <Link href="/about" className="hover:text-[#8B5CF6] transition-colors">
+            About
+          </Link>
+
           <Link href="/pricing" className="hover:text-[#8B5CF6] transition-colors">
             Pricing
           </Link>
@@ -32,6 +38,7 @@ export default function Header() {
             Contact
           </Link>
         </nav>
+        )}
 
         {/* Mobile hamburger */}
         <button
@@ -56,6 +63,9 @@ export default function Header() {
 
             <Link href="/playground" className="hover:text-[#8B5CF6] transition-colors">
               Playground
+            </Link>
+            <Link href="/about" className="hover:text-[#8B5CF6] transition-colors">
+              About
             </Link>
             <Link href="/pricing" className="hover:text-[#8B5CF6] transition-colors">
               Pricing

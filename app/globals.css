@@ -124,6 +124,77 @@
 
 /* Life simulation container */
 .p-3.bg\[\#020617\] { background: linear-gradient(180deg,#020617,#071026); border: 1px solid rgba(255,255,255,0.02); }
+
+/* Engine Room styles */
+.ascii { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; color: #c7c3ff; white-space: pre; background: linear-gradient(90deg, rgba(124,58,237,0.06), rgba(6,182,212,0.03)); padding: 10px; border-radius: 6px; display:inline-block }
+.badge{ background: linear-gradient(180deg,#111827,#0b1220); padding:6px 10px; border-radius:999px; font-weight:700; font-size:0.85rem; border:1px solid rgba(255,255,255,0.03)}
+.terminal-feed { max-height: 180px }
+.terminal-header .dot { width:10px; height:10px; border-radius: 999px; display:inline-block }
+
+/* About page stat styles */
+.stat-badge { background: linear-gradient(180deg,#7C3AED,#06b6d4); padding:6px 10px; border-radius:999px; color:white; font-weight:700 }
+.stat-card { transition: transform .18s ease, box-shadow .18s ease; }
+.stat-card:hover{ transform: translateY(-3px); box-shadow: 0 8px 24px rgba(2,6,23,0.3) }
+.countup { font-variant-numeric: tabular-nums }
+
+/* Terminal feed */
+.terminal-feed { font-family: ui-monospace, Menlo, Monaco, "Roboto Mono", monospace; font-size: 12px }
+
+/* Poll */
+.editor-poll button { transition: transform .12s ease }
+.editor-poll button:active { transform: translateY(1px) }
+
+/* Terminal page styles */
+.terminal-shell { max-width: 1100px; }
+.terminal-shell-inner { background: linear-gradient(180deg,#020417,#071026); border-radius: 0.8rem; color: #e6eef8; box-shadow: 0 30px 80px rgba(2,6,23,0.65); border: 1px solid rgba(255,255,255,0.04); padding: 28px; min-height:520px }
+.terminal-controls .dot { width:10px; height:10px; border-radius:999px; display:inline-block }
+.terminal-ascii { font-family: ui-monospace, Menlo, Monaco, "Roboto Mono", monospace; color:#c7c3ff; font-size:12px; background: rgba(255,255,255,0.01); display:inline-block; padding:10px; border-radius:6px }
+.terminal-section { padding: 8px 0 }
+.terminal-section-title { font-family: ui-monospace, Menlo, Monaco, "Roboto Mono", monospace; color:#c7c3ff; font-weight:700; font-size:0.95rem }
+.terminal-line { font-family: ui-monospace, Menlo, Monaco, "Roboto Mono", monospace; color:#e6eef8; line-height:1.6 }
+
+/* Terminal nav and logo */
+.ascii-logo { position: relative; overflow: hidden } 
+.ascii-logo::after{ content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 56px; pointer-events:none; background: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,0.45)); border-top-right-radius:6px; border-bottom-right-radius:6px }
+.ascii-logo pre { line-height: 0.88; font-size: clamp(8px, 1.2vw, 12px); color: #d6cfff; white-space: pre; display: block; margin: 0 }
+.ascii-big { font-size: clamp(8px, 1.2vw, 12px); color: #ffd6a6; text-shadow: 0 0 8px rgba(255,214,166,0.14), 0 0 20px rgba(124,58,237,0.08); line-height:0.92; font-family: 'Courier New', Consolas, 'Roboto Mono', monospace; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display:block }
+.terminal-nav { align-items:center }
+.terminal-link { color: #a8b4ff; padding: 6px 8px; border-radius: 6px; font-weight: 600; text-decoration: none }
+.terminal-link:hover { color: white; background: linear-gradient(90deg, rgba(124,58,237,0.12), rgba(6,182,212,0.06)); }
+.blink-caret { animation: blink 1s steps(2, start) infinite; margin-left:6px; color: #7C3AED }
+
+/* Make terminal header colorful */
+.terminal-controls .ascii-logo { background: linear-gradient(90deg, rgba(124,58,237,0.04), rgba(6,182,212,0.02)); padding: 8px; border-radius:6px }
+.terminal-link { position: relative }
+.terminal-link::after{ content: ''; position: absolute; left: 0; right:0; bottom: -6px; height: 2px; background: linear-gradient(90deg,#7C3AED,#06b6d4); opacity:0; transition: opacity .18s }
+.terminal-link:hover::after{ opacity: 1 }
+
+
+/* Neon / flicker effect */
+@keyframes terminalFlicker { 0% { filter: brightness(1); } 50% { filter: brightness(.98) } 100% { filter: brightness(1) } }
+.terminal-shell-inner { animation: terminalFlicker 6s ease-in-out infinite }
+
+/* Accent color */
+.accent { background: linear-gradient(90deg,#7C3AED,#06b6d4); -webkit-background-clip: text; background-clip:text; color: transparent }
+
+
+/* Make inner cards compact and terminal-friendly */
+.terminal-shell-inner .case-card, .terminal-shell-inner .stat-card, .terminal-shell-inner .p-3, .terminal-shell-inner .badge { background: transparent !important; box-shadow: none !important; border: none !important; padding: 0 !important }
+.terminal-shell-inner .stat-card { display: block; padding: 6px 0 }
+.terminal-shell-inner .team-grid > div { padding: 4px 0 }
+.terminal-shell-inner .team-grid { display:block }
+.terminal-shell-inner .values-band > div { padding: 4px 0 }
+
+/* Improve visibility */
+.terminal-shell-inner .text-slate-300 { color: #cbd5e1 }
+.terminal-shell-inner .text-slate-200 { color: #e6eef8 }
+
+/* Terminal small-screen tweaks */
+@media (max-width: 640px) {
+  .terminal-shell-inner { padding: 14px }
+  .terminal-shell-inner .terminal-section-title { font-size:0.8rem }
+}
+
 .case-card .meta { color:#6b7280; font-size:0.85rem; margin-bottom:6px }
 .case-card .quote { font-style: italic; color:#111827; margin-top:8px }
 
