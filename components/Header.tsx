@@ -24,6 +24,9 @@ export default function Header() {
           <Link href="/templates" className="hover:text-[#8B5CF6] transition-colors">
             Templates
           </Link>
+          <Link href="/playground" className="hover:text-[#8B5CF6] transition-colors">
+            Playground
+          </Link>
           <Link href="/pricing" className="hover:text-[#8B5CF6] transition-colors">
             Pricing
           </Link>
@@ -36,8 +39,6 @@ export default function Header() {
         <button
           type="button"
           className="sm:hidden inline-flex items-center justify-center rounded-md p-2 text-neutral-700 hover:bg-neutral-100"
-          aria-label="Toggle navigation"
-          aria-expanded={open}
           onClick={() => setOpen((prev) => !prev)}
         >
           <span className="sr-only">Open main menu</span>
@@ -57,6 +58,9 @@ export default function Header() {
             <Link href="/templates" className="hover:text-[#8B5CF6] transition-colors">
               Templates
             </Link>
+            <Link href="/playground" className="hover:text-[#8B5CF6] transition-colors">
+              Playground
+            </Link>
             <Link href="/pricing" className="hover:text-[#8B5CF6] transition-colors">
               Pricing
             </Link>
@@ -65,7 +69,7 @@ export default function Header() {
             </Link>
           </div>
         </nav>
-      )}
+      )}  
     </header>
   );
 }

@@ -1,56 +1,55 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function Pricing() {
+  const [currency, setCurrency] = useState<"USD" | "LKR">("USD");
+
   const services = [
     {
       name: "Landing Page",
-      price: "$2,500",
-      delivery: "5 business days",
+      priceUSD: "$250",
+      priceLKR: "75,000",
+      delivery: "5 days",
       features: [
-        "Single high-converting page",
-        "Mobile responsive design",
-        "Contact form integration",
-        "Basic SEO optimization",
-        "Performance optimization",
-        "Unlimited revisions",
-        "30-day support included",
+        "High-converting single page",
+        "Mobile-responsive & fast",
+        "Contact form + analytics",
       ],
     },
     {
       name: "Static Website",
-      price: "$5,000",
+      priceUSD: "$500",
+      priceLKR: "150,000",
       delivery: "2 weeks",
       features: [
         "Up to 7 pages",
-        "Mobile responsive design",
-        "Contact form integration",
-        "Full SEO optimization",
-        "Performance optimization",
-        "CMS setup (optional)",
-        "Unlimited revisions",
-        "60-day support included",
+        "SEO & performance",
+        "Optional CMS",
       ],
       highlighted: true,
     },
     {
       name: "Website Redesign",
-      price: "$4,000",
-      delivery: "10 business days",
+      priceUSD: "$400",
+      priceLKR: "120,000",
+      delivery: "10 days",
       features: [
-        "Complete visual refresh",
-        "Mobile responsive design",
-        "Improved user experience",
-        "Full SEO optimization",
-        "Performance optimization",
+        "Design refresh",
+        "Improved UX",
         "Content migration",
-        "Unlimited revisions",
-        "60-day support included",
       ],
     },
   ];
+
+
+  const getPrice = (service: typeof services[0]) => {
+    return currency === "USD" ? service.priceUSD : `${service.priceLKR} LKR`;
+  };
 
   return (
     <div className="min-h-screen">
@@ -62,10 +61,29 @@ export default function Pricing() {
             <h1 className="text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl font-bold text-black tracking-tight mb-4 md:mb-6">
               Pricing
             </h1>
-            <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl text-gray-700 mb-12 md:mb-16 max-w-3xl">
-              Fixed-price packages designed for small businesses. Fast delivery,
-              unlimited revisions, no surprises.
+            <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl text-gray-800 mb-8 md:mb-12 max-w-3xl">
+              Fixed-price packages built for speed and clarity — no surprises.
             </p>
+
+            {/* Currency Toggle */}
+            <div className="flex items-center justify-center gap-4 mb-12 md:mb-16">
+              <span className={`text-base md:text-lg font-medium ${currency === "USD" ? "text-black" : "text-gray-400"}`}>
+                USD
+              </span>
+              <button
+                onClick={() => setCurrency(currency === "USD" ? "LKR" : "USD")}
+                className="relative w-14 h-7 md:w-16 md:h-8 bg-gray-200 rounded-full transition-colors duration-300"
+              >
+                <span
+                  className={`absolute top-1 left-1 w-5 h-5 md:w-6 md:h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
+                    currency === "LKR" ? "translate-x-7 md:translate-x-8" : "translate-x-0"
+                  }`}
+                />
+              </button>
+              <span className={`text-base md:text-lg font-medium ${currency === "LKR" ? "text-black" : "text-gray-400"}`}>
+                LKR
+              </span>
+            </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {services.map((service) => (
@@ -81,7 +99,7 @@ export default function Pricing() {
                     {service.name}
                   </h2>
                   <div className="text-3xl md:text-4xl font-bold text-black mb-1 md:mb-2">
-                    {service.price}
+                    {getPrice(service)}
                   </div>
                   <div className="text-base md:text-base text-gray-600 mb-6 md:mb-8">
                     {service.delivery}
@@ -95,7 +113,7 @@ export default function Pricing() {
                             size={18}
                             className="text-[#8B5CF6] mt-0.5 flex-shrink-0 md:w-5 md:h-5"
                           />
-                          <span className="text-sm md:text-base text-gray-700 leading-relaxed">{feature}</span>
+                          <span className="text-sm md:text-base text-gray-800 leading-relaxed">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -109,7 +127,7 @@ export default function Pricing() {
                         : "border-2 border-black text-black hover:bg-gray-50"
                     }`}
                   >
-                    Get Started
+                    Start estimate
                   </Link>
                 </div>
               ))}
@@ -121,36 +139,18 @@ export default function Pricing() {
         <section className="px-6 py-16 md:px-16 md:py-24 lg:px-24 bg-black text-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl font-bold tracking-tight mb-12 md:mb-16">How it works</h2>
-            <div className="space-y-6 md:space-y-8 text-base md:text-lg">
+            <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
-                <span className="text-white font-bold text-lg md:text-xl">1. Discovery</span>
-                <p className="text-gray-300 mt-1.5 md:mt-2 leading-relaxed text-base md:text-lg">
-                  We discuss your business, goals, and requirements in a 30-minute call
-                </p>
+                <div className="font-bold">1. Discover</div>
+                <div className="text-gray-300 mt-1">Quick scoping call — we clear deliverables and timeline</div>
               </div>
               <div>
-                <span className="text-white font-bold text-lg md:text-xl">2. Design</span>
-                <p className="text-gray-300 mt-1.5 md:mt-2 leading-relaxed text-base md:text-lg">
-                  We create initial designs based on your brand and preferences
-                </p>
+                <div className="font-bold">2. Deliver</div>
+                <div className="text-gray-300 mt-1">Design & build to the agreed scope</div>
               </div>
               <div>
-                <span className="text-white font-bold text-lg md:text-xl">3. Development</span>
-                <p className="text-gray-300 mt-1.5 md:mt-2 leading-relaxed text-base md:text-lg">
-                  We build your site with clean code and modern standards
-                </p>
-              </div>
-              <div>
-                <span className="text-white font-bold text-lg md:text-xl">4. Refinement</span>
-                <p className="text-gray-300 mt-1.5 md:mt-2 leading-relaxed text-base md:text-lg">
-                  Unlimited revisions until you're completely satisfied
-                </p>
-              </div>
-              <div>
-                <span className="text-white font-bold text-lg md:text-xl">5. Launch</span>
-                <p className="text-gray-300 mt-1.5 md:mt-2 leading-relaxed text-base md:text-lg">
-                  We deploy your site and provide training and documentation
-                </p>
+                <div className="font-bold">3. Launch</div>
+                <div className="text-gray-300 mt-1">We deploy and hand off with clear docs</div>
               </div>
             </div>
           </div>

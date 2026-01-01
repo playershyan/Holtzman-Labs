@@ -17,7 +17,7 @@ export default function Footer() {
             </span>
           </Link>
           <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl text-gray-600 max-w-xl">
-            Fast, reliable software solutions
+            Engineering, shipped fast.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <a
               href="mailto:hello@holtzmanlabs.com"
-              className="text-base md:text-lg lg:text-xl text-black hover:text-[#8B5CF6] transition-colors font-medium"
+              className="text-base md:text-lg lg:text-xl text-black hover:text-[var(--color-primary)] transition-colors font-medium"
             >
               hello@holtzmanlabs.com
             </a>

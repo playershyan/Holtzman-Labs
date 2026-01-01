@@ -51,22 +51,20 @@ export default function CategoryTabs({
         <button
           onClick={() => scroll("left")}
           className="absolute left-0 top-0 bottom-0 z-10 bg-gradient-to-r from-white via-white to-transparent px-4 hover:text-[#8B5CF6] transition-colors"
-          aria-label="Scroll left"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-      )}
+      )} 
 
       {/* Right Arrow */}
       {showRightArrow && (
         <button
           onClick={() => scroll("right")}
           className="absolute right-0 top-0 bottom-0 z-10 bg-gradient-to-l from-white via-white to-transparent px-4 hover:text-[#8B5CF6] transition-colors"
-          aria-label="Scroll right"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
-      )}
+      )} 
 
       {/* Scrollable Container */}
       <div
@@ -93,7 +91,7 @@ export default function CategoryTabs({
             href="/contact"
             className="pb-4 text-lg text-gray-500 hover:text-[#8B5CF6] transition-colors whitespace-nowrap"
           >
-            Couldn't find it? Contact us
+            Need something custom? Contact us
           </Link>
         </div>
       </div>

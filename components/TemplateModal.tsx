@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
 import { Template } from "@/lib/templates-data";
@@ -11,6 +12,8 @@ interface TemplateModalProps {
 }
 
 export default function TemplateModal({ template, onClose }: TemplateModalProps) {
+  const [imageError, setImageError] = useState(false);
+
   // Close on ESC key
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -20,7 +23,7 @@ export default function TemplateModal({ template, onClose }: TemplateModalProps)
     return () => window.removeEventListener("keydown", handleEsc);
   }, [onClose]);
 
-  // Prevent body scroll
+  // Prevent body scroll on mount
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -30,7 +33,7 @@ export default function TemplateModal({ template, onClose }: TemplateModalProps)
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 backdrop-blur-md bg-white/30 z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
       <div
@@ -41,7 +44,6 @@ export default function TemplateModal({ template, onClose }: TemplateModalProps)
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-gray-600 hover:text-black z-10"
-          aria-label="Close modal"
         >
           <X className="w-6 h-6" />
         </button>
@@ -51,17 +53,28 @@ export default function TemplateModal({ template, onClose }: TemplateModalProps)
           <div className="md:flex md:gap-8">
             {/* Preview Image */}
             <div className="md:w-2/5 mb-6 md:mb-0">
-              <div className="bg-gray-100 aspect-[3/4] flex items-center justify-center border border-gray-200">
-                <span className="text-gray-400">Template Preview</span>
+              <div className="bg-gray-100 aspect-[3/4] flex items-center justify-center border border-gray-200 relative overflow-hidden">
+                {template.previewImage && !imageError ? (
+                  <Image
+                    src={template.previewImage}
+                    alt={template.title}
+                    fill
+                    className="object-cover"
+                    onError={() => setImageError(true)}
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                  />
+                ) : (
+                  <span className="text-gray-400">Preview</span>
+                )} 
               </div>
             </div>
 
             {/* Details */}
             <div className="md:w-3/5">
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+              <h2 id="template-modal-title" className="text-3xl md:text-4xl font-bold text-black mb-4">
                 {template.title}
               </h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-800 mb-6 leading-relaxed">
                 {template.fullDescription}
               </p>
 
@@ -73,7 +86,7 @@ export default function TemplateModal({ template, onClose }: TemplateModalProps)
                 {template.features.map((feature, index) => (
                   <li key={index} className="flex items-start">
                     <span className="text-[#8B5CF6] mr-2">•</span>
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-gray-800">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -86,13 +99,13 @@ export default function TemplateModal({ template, onClose }: TemplateModalProps)
                   rel="noopener noreferrer"
                   className="bg-[#8B5CF6] text-white px-6 py-3 font-semibold hover:bg-[#7C3AED] transition-colors text-center"
                 >
-                  View Live Demo →
+                  Open demo
                 </a>
                 <Link
                   href="/contact"
                   className="border-2 border-[#8B5CF6] text-[#8B5CF6] px-6 py-3 font-semibold hover:bg-[#8B5CF6] hover:text-white transition-colors text-center"
                 >
-                  Get This Template
+                  Use template
                 </Link>
               </div>
             </div>

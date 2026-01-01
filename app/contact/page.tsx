@@ -36,19 +36,18 @@ export default function Contact() {
       <main className="px-6 py-12 md:px-16 md:py-16 lg:px-24">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-24">
-            {/* Left Column - Info */}
+            {/* Left Column - Info (condensed) */}
             <div>
               <h1 className="text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl font-bold text-black tracking-tight mb-4 md:mb-6">
-                Get in touch
+                Start a scoped estimate
               </h1>
-              <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl text-gray-700 mb-10 md:mb-12 max-w-xl">
-                Ready to start your project? Fill out the form and we'll respond
-                within 24 hours.
+              <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl text-gray-800 mb-6 max-w-xl">
+                Tell us the outcome you need — we’ll reply within 24 hours with a clear, fixed proposal.
               </p>
 
               <div className="space-y-6 md:space-y-8">
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold text-black mb-2">Email</h3>
+                  <h3 className="text-sm font-semibold text-gray-700 mb-1">Email</h3>
                   <a
                     href="mailto:hello@holtzmanlabs.com"
                     className="text-[#8B5CF6] hover:text-[#7C3AED] transition-colors text-base md:text-lg"
@@ -58,36 +57,12 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+                  <h3 className="text-sm font-semibold text-gray-700 mb-1">
                     Typical Response Time
                   </h3>
-                  <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                  <p className="text-gray-800 text-base md:text-lg leading-relaxed">
                     Within 24 hours on business days
                   </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg md:text-xl font-bold text-black mb-3 md:mb-4">
-                    What to expect
-                  </h3>
-                  <ul className="space-y-2.5 md:space-y-3 text-gray-700 text-base md:text-lg">
-                    <li className="flex items-start">
-                      <span className="text-[#8B5CF6] mr-2">•</span>
-                      <span>Initial consultation call (30 minutes)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#8B5CF6] mr-2">•</span>
-                      <span>Custom proposal based on your needs</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#8B5CF6] mr-2">•</span>
-                      <span>Clear timeline and deliverables</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-[#8B5CF6] mr-2">•</span>
-                      <span>Fixed pricing with no surprises</span>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -169,16 +144,16 @@ export default function Contact() {
                     required
                     rows={6}
                     className="w-full px-3 py-2.5 md:px-4 md:py-3 text-base border-2 border-gray-300 focus:outline-none focus:border-[#8B5CF6] bg-white resize-none transition-colors"
-                    placeholder="Tell us about your project, timeline, and any specific requirements..."
+                    placeholder="Briefly: outcome, timeline, budget (optional)"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 md:px-8 md:py-4 text-base md:text-base bg-[#8B5CF6] text-white font-semibold hover:bg-[#7C3AED] transition-colors"
+                  className="w-full px-6 py-3 md:px-8 md:py-4 text-base md:text-base bg-[var(--color-primary)] text-white font-semibold hover:brightness-105 transition-colors focus-visible:outline-none"
                 >
-                  Send Message
-                </button>
+                  Request estimate
+                </button> 
               </form>
             </div>
           </div>

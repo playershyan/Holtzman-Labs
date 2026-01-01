@@ -27,8 +27,8 @@ export default function Templates() {
           <h1 className="text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl font-bold text-black tracking-tight mb-4 md:mb-6">
             Templates
           </h1>
-          <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed text-gray-700 mb-10 md:mb-12 max-w-3xl">
-            Pre-built designs customized to your brand and content. Fast deployment, professional results
+          <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed text-gray-800 mb-10 md:mb-12 max-w-3xl">
+            Pre-built sites you can preview and launch today — quick, reliable, and brandable.
           </p>
 
           {/* Category Tabs */}

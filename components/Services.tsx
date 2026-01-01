@@ -1,47 +1,24 @@
 export default function Services() {
-  const services = [
-    {
-      title: "Landing pages",
-      subtitle:
-        "High-converting single-page sites built to turn visitors into customers",
-    },
-    {
-      title: "Static Websites",
-      subtitle:
-        "Fast, reliable multi-page sites with clean navigation and structure.",
-    },
-    {
-      title: "Portfolio sites",
-      subtitle:
-        "Showcase your work with elegant, professional designs that make lasting impressions.",
-    },
-    {
-      title: "Redesigns",
-      subtitle:
-        "Transform your existing site into a modern, high-performance asset.",
-    },
-  ];
 
   return (
-    <section className="px-6 py-16 md:px-16 md:py-24 lg:px-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl font-bold text-black tracking-tight mb-12 md:mb-16">
-          Services
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 border border-gray-200 hover:border-[#8B5CF6] hover:shadow-lg transition-all"
-            >
-              <h3 className="text-xl leading-tight md:text-2xl font-bold text-black mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-700 text-base leading-relaxed md:text-lg">
-                {service.subtitle}
-              </p>
-            </div>
-          ))}
+    <section className="px-6 py-12 md:px-16 md:py-20 lg:px-24 bg-gray-50">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">Proof</h2>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+          <div className="max-w-xs">
+            <div className="text-lg font-bold">5-day landing pages</div>
+            <div className="text-sm text-gray-600 mt-1">Launch fast, get measurable results</div>
+          </div>
+
+          <div className="max-w-xs">
+            <div className="text-lg font-bold">Fixed price</div>
+            <div className="text-sm text-gray-600 mt-1">Clear scope — no surprises</div>
+          </div>
+
+          <div className="max-w-xs">
+            <div className="text-lg font-bold">Proven</div>
+            <div className="text-sm text-gray-600 mt-1">Trusted across multiple successful launches</div>
+          </div>
         </div>
       </div>
     </section>
