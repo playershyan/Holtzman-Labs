@@ -1,3 +1,5 @@
+import ClientLogos from './ClientLogos'
+
 export default function Services() {
 
   return (
