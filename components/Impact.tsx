@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import LifeSimulation from './LifeSimulation'
 
 export default function Impact() {
   return (
@@ -43,7 +43,7 @@ export default function Impact() {
 
           <div className="md:col-span-1">
             <div className="w-full h-40 relative overflow-hidden rounded-md">
-              <Image src="/templates/aurium-one.jpg" alt="Case snapshot" fill className="object-cover" />
+              <LifeSimulation />
             </div>
 
             <div className="mt-4 flex gap-3">

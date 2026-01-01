@@ -121,6 +121,9 @@
 .client-logos .logo { display:inline-flex; align-items:center; justify-content:center; width:64px; height:36px; background:#fff; color:#111827; border-radius:6px; font-weight:700; box-shadow:0 6px 18px rgba(2,6,23,0.06); font-size:0.85rem }
 
 .case-card { background: linear-gradient(180deg, #ffffff, #fbfbff); border-radius: 0.75rem; padding: 1rem; box-shadow: 0 12px 36px rgba(2,6,23,0.06); border: 1px solid rgba(11,17,30,0.04) }
+
+/* Life simulation container */
+.p-3.bg\[\#020617\] { background: linear-gradient(180deg,#020617,#071026); border: 1px solid rgba(255,255,255,0.02); }
 .case-card .meta { color:#6b7280; font-size:0.85rem; margin-bottom:6px }
 .case-card .quote { font-style: italic; color:#111827; margin-top:8px }
 
