@@ -248,7 +248,7 @@ export default function AlcubierreWarpBubble() {
         <h3 className="text-xl font-bold text-black mb-3">
           Alcubierre Warp Bubble
         </h3>
-        <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-gray-800 leading-relaxed max-w-2xl mx-auto">
           Visualization of volume element expansion and contraction within an Alcubierre
           warp drive. Space contracts in front of the bubble (compressed grid), remains
           flat within the bubble (normal spacing), and expands behind (expanded grid),

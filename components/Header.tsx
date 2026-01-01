@@ -21,9 +21,7 @@ export default function Header() {
           <Link href="/" className="hover:text-[#8B5CF6] transition-colors">
             Home
           </Link>
-          <Link href="/templates" className="hover:text-[#8B5CF6] transition-colors">
-            Templates
-          </Link>
+
           <Link href="/playground" className="hover:text-[#8B5CF6] transition-colors">
             Playground
           </Link>
@@ -55,9 +53,7 @@ export default function Header() {
             <Link href="/" className="hover:text-[#8B5CF6] transition-colors">
               Home
             </Link>
-            <Link href="/templates" className="hover:text-[#8B5CF6] transition-colors">
-              Templates
-            </Link>
+
             <Link href="/playground" className="hover:text-[#8B5CF6] transition-colors">
               Playground
             </Link>
