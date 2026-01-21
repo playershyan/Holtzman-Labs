@@ -1,25 +1,36 @@
 'use client'
 
 import React, { useState } from 'react'
-import SpaceInvaders from './SpaceInvaders'
 
 type Line = { id: number; text?: string; klass?: string; component?: React.ReactNode }
 
 const DEMO_COMMANDS = [
   { cmd: 'help', label: 'help' },
+  { cmd: 'status', label: 'status' },
+  { cmd: 'stack', label: 'stack' },
+  { cmd: 'about', label: 'about' },
   { cmd: 'fortune', label: 'fortune' },
-  { cmd: 'invaders', label: 'invaders' },
-  { cmd: 'life', label: 'life' },
-  { cmd: 'matrix', label: 'matrix' },
   { cmd: 'uuid', label: 'uuid' },
-  { cmd: 'color', label: 'color' },
+  { cmd: 'hire', label: 'hire' },
 ]
 
 const ORIGINAL_COMMANDS = [
-  { cmd: 'status', out: 'All systems nominal — no incidents reported.' },
-  { cmd: 'build --release', out: 'Build succeeded in 3.4s — artifacts: app-v1.2.0.tgz' },
-  { cmd: 'analyze --deep', out: 'Static analysis: 0 critical issues, 2 warnings. See report at /reports/analysis-2026-01-01.html' },
-  { cmd: 'deploy production', out: 'Deploy staged to production ✓ 2026-01-01T00:00:00Z' },
+  {
+    cmd: 'status',
+    out: `✓ Accepting new projects\n✓ Response time: < 4 hours\n✓ Based in Colombo 🇱🇰\n✓ Engineering over obedience`
+  },
+  {
+    cmd: 'stack',
+    out: `Next.js • TypeScript • PostgreSQL • Vercel\nWe adapt. But we push back on bad tech choices.`
+  },
+  {
+    cmd: 'about',
+    out: `We don't say yes to bad ideas. We build software to last.\n→ /about for full philosophy`
+  },
+  {
+    cmd: 'hire',
+    out: `hello@holtzmanlabs.com\nWe turn down ~60% of inquiries. We're selective.\n→ /contact for project scoping`
+  },
 ]
 
 const FORTUNES = [
@@ -42,7 +53,7 @@ const FORTUNES = [
 
 export default function TerminalPlayground({ autoRunCmd }: { autoRunCmd?: string }) {
   const [lines, setLines] = useState<Line[]>([
-    { id: 1, text: 'Welcome to the Holtzman Labs terminal playground. Type `help` to see available commands or try a demo below.' },
+    { id: 1, text: 'Welcome to Holtzman Labs. Type `help` to see commands or try the buttons below.' },
   ])
   const [input, setInput] = useState('')
   const [nextId, setNextId] = useState(2)
@@ -94,27 +105,18 @@ export default function TerminalPlayground({ autoRunCmd }: { autoRunCmd?: string
       } catch {
         output = 'Error: Invalid JSON. Usage: format-json {"key":"value"}'
       }
-    } else if (command === 'matrix') {
-      runMatrixRain(idNow)
-      return
-    } else if (command === 'life') {
-      runGameOfLife(idNow)
-      return
-    } else if (command === 'invaders') {
-      runSpaceInvaders(idNow)
-      return
     } else if (command === 'help') {
       output = `Available commands:
-• fortune - Get a random dev quote
-• invaders - Play Space Invaders game
+• status - Check our availability
+• stack - See our tech stack
+• about - Our philosophy (one-liner)
+• hire - Get in touch
+• fortune - Random dev wisdom
 • uuid - Generate a UUID
 • encode <text> - Base64 encode
 • decode <base64> - Base64 decode
 • color - Random hex color
-• format-json <json> - Format JSON
-• matrix - Matrix rain animation
-• life - Conway's Game of Life
-• status, build --release, analyze --deep, deploy production`
+• format-json <json> - Format JSON`
     } else {
       // Find demo command output or fallback
       const demo = ORIGINAL_COMMANDS.find((d) => d.cmd === cmd) || null
@@ -137,98 +139,6 @@ export default function TerminalPlayground({ autoRunCmd }: { autoRunCmd?: string
     })
   }
 
-  function runMatrixRain(startId: number) {
-    const frames = [
-      '█ ▓ ░ █ ▓ ░ █ ▓ ░',
-      '░ █ ▓ ░ █ ▓ ░ █ ▓',
-      '▓ ░ █ ▓ ░ █ ▓ ░ █',
-      '█ ▓ ░ █ ▓ ░ █ ▓ ░',
-      '░ █ ▓ ░ █ ▓ ░ █ ▓',
-      '▓ ░ █ ▓ ░ █ ▓ ░ █',
-      '█ ▓ ░ █ ▓ ░ █ ▓ ░',
-      '░ █ ▓ ░ █ ▓ ░ █ ▓',
-    ]
-
-    let frameIndex = 0
-    const interval = setInterval(() => {
-      if (frameIndex >= frames.length) {
-        clearInterval(interval)
-        setLines((l) => [...l, { id: startId + frameIndex + 2, text: 'Matrix rain complete.' }])
-        setIsRunning(false)
-        setNextId((n) => n + frameIndex + 3)
-        return
-      }
-
-      setLines((l) => [...l, { id: startId + frameIndex + 1, text: frames[frameIndex], klass: 'text-green-400' }])
-      setNextId((n) => n + 1)
-      frameIndex++
-    }, 200)
-  }
-
-  function runGameOfLife(startId: number) {
-    // Initialize a small grid with a glider pattern
-    const width = 20
-    const height = 8
-    let grid = Array(height).fill(0).map(() => Array(width).fill(0))
-
-    // Glider pattern
-    grid[1][2] = 1
-    grid[2][3] = 1
-    grid[3][1] = 1
-    grid[3][2] = 1
-    grid[3][3] = 1
-
-    const generations = 15
-    let currentGen = 0
-
-    const interval = setInterval(() => {
-      if (currentGen >= generations) {
-        clearInterval(interval)
-        setLines((l) => [...l, { id: startId + currentGen + 2, text: 'Game of Life simulation complete.' }])
-        setIsRunning(false)
-        setNextId((n) => n + currentGen + 3)
-        return
-      }
-
-      const display = grid.map(row => row.map(cell => cell ? '█' : '·').join(' ')).join('\n')
-      setLines((l) => [...l, { id: startId + currentGen + 1, text: `Generation ${currentGen + 1}:\n${display}`, klass: 'text-cyan-400' }])
-      setNextId((n) => n + 1)
-
-      // Calculate next generation
-      const newGrid = grid.map((row, y) =>
-        row.map((cell, x) => {
-          const neighbors = countNeighbors(grid, x, y, width, height)
-          if (cell === 1) {
-            return neighbors === 2 || neighbors === 3 ? 1 : 0
-          } else {
-            return neighbors === 3 ? 1 : 0
-          }
-        })
-      )
-      grid = newGrid
-      currentGen++
-    }, 400)
-  }
-
-  function countNeighbors(grid: number[][], x: number, y: number, width: number, height: number): number {
-    let count = 0
-    for (let dy = -1; dy <= 1; dy++) {
-      for (let dx = -1; dx <= 1; dx++) {
-        if (dx === 0 && dy === 0) continue
-        const nx = (x + dx + width) % width
-        const ny = (y + dy + height) % height
-        count += grid[ny][nx]
-      }
-    }
-    return count
-  }
-
-  function runSpaceInvaders(startId: number) {
-    setLines((l) => [...l, { id: startId + 1, component: <SpaceInvaders key={startId + 1} /> }])
-    setIsRunning(false)
-    setNextId((n) => n + 2)
-  }
-
   // Auto-run a single demo command when used as a hero if requested
   React.useEffect(() => {
     if (!autoRunCmd) return
@@ -244,6 +154,13 @@ export default function TerminalPlayground({ autoRunCmd }: { autoRunCmd?: string
     setInput('')
   }
 
+  function handleDemoClick(cmd: string) {
+    // Clear terminal and run fresh command for better UX
+    setLines([])
+    setNextId(1)
+    setTimeout(() => runCommand(cmd), 100)
+  }
+
   return (
     <div className="terminal-playground w-full rounded-xl border border-gray-800 bg-[#0b0f14] shadow-xl overflow-hidden">
       <div className="px-4 py-3 bg-gradient-to-r from-[#0f1724] to-[#07101a] flex items-center gap-3">
@@ -256,7 +173,7 @@ export default function TerminalPlayground({ autoRunCmd }: { autoRunCmd?: string
       <div ref={outputRef} className="p-4 font-mono text-sm text-gray-200 overflow-y-auto" style={{ minHeight: 240 }}>
         <div className="space-y-2">
           {lines.map((ln) => (
-            <div key={ln.id} className={ln.klass ?? ''}>
+            <div key={ln.id} className={ln.klass ?? ''} style={{ whiteSpace: 'pre-line' }}>
               {ln.component ? ln.component : ln.text}
             </div>
           ))}
@@ -268,7 +185,7 @@ export default function TerminalPlayground({ autoRunCmd }: { autoRunCmd?: string
           aria-label="Terminal input"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="type a command (e.g., status)"
+          placeholder="try: status, stack, or help"
           className="flex-1 bg-transparent outline-none text-gray-200 font-mono text-sm placeholder:text-gray-500"
         />
         <button
@@ -285,7 +202,7 @@ export default function TerminalPlayground({ autoRunCmd }: { autoRunCmd?: string
           {DEMO_COMMANDS.map((d) => (
             <button
               key={d.cmd}
-              onClick={() => runCommand(d.cmd)}
+              onClick={() => handleDemoClick(d.cmd)}
               className="text-xs rounded-md px-2 py-1 bg-gradient-to-r from-[#0f1724] to-[#07101a] text-gray-200 hover:opacity-95 ring-1 ring-[#0b1220]"
             >
               {d.label || d.cmd}

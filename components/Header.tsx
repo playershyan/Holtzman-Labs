@@ -23,6 +23,10 @@ export default function Header({ hideDesktopNav = false }: { hideDesktopNav?: bo
             Home
           </Link>
 
+          <Link href="/our-work" className="hover:text-[#8B5CF6] transition-colors">
+            Our Work
+          </Link>
+
           <Link href="/playground" className="hover:text-[#8B5CF6] transition-colors">
             Playground
           </Link>
@@ -59,6 +63,10 @@ export default function Header({ hideDesktopNav = false }: { hideDesktopNav?: bo
           <div className="mx-auto flex max-w-5xl flex-col px-6 py-4 text-base text-neutral-700 space-y-3">
             <Link href="/" className="hover:text-[#8B5CF6] transition-colors">
               Home
+            </Link>
+
+            <Link href="/our-work" className="hover:text-[#8B5CF6] transition-colors">
+              Our Work
             </Link>
 
             <Link href="/playground" className="hover:text-[#8B5CF6] transition-colors">
