@@ -126,7 +126,7 @@ Perfect For:
 • B2B SaaS products
 • Subscription-based services
 • Multi-tenant applications`,
-      image: '',
+      image: '/projects/auriumtemplate.jpg',
       technologies: ['Next.js', 'TypeScript', 'Prisma', 'Stripe', 'NextAuth.js', 'tRPC'],
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com',
@@ -166,7 +166,7 @@ Ideal For:
 • Developer blogs
 • Agency showcases
 • Technical documentation sites`,
-      image: '',
+      image: '/projects/gym1template.jpg',
       technologies: ['Next.js', 'MDX', 'Tailwind CSS', 'ContentLayer', 'Framer Motion'],
       liveUrl: 'https://example.com',
       githubUrl: 'https://github.com',
@@ -273,17 +273,6 @@ Perfect For:
 
       <main className="py-16 px-6 md:px-16 lg:px-24">
         <div className="max-w-7xl mx-auto">
-          {/* Page Header */}
-          <div className="mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Our Work
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl">
-              Showcase of projects we've built and templates we've crafted.
-              Clean code, no shortcuts, no technical debt.
-            </p>
-          </div>
-
           {/* Highlight Projects Section */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-black mb-8">

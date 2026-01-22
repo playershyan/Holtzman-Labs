@@ -1,13 +1,15 @@
 'use client';
 
 import Link from 'next/link';
-import TechnicalDebtCalculator from './TechnicalDebtCalculator';
+// DISABLED: Technical Debt Calculator
+// import TechnicalDebtCalculator from './TechnicalDebtCalculator';
 
 export default function EngineeringPhilosophy() {
   return (
     <section className="px-6 py-16 md:px-16 md:py-24 lg:px-24 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        {/* DISABLED: Changed from grid md:grid-cols-2 to single column */}
+        <div className="max-w-3xl">
           {/* Left Column: Philosophy & Principles */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
@@ -74,10 +76,10 @@ export default function EngineeringPhilosophy() {
             </Link>
           </div>
 
-          {/* Right Column: Technical Debt Calculator */}
-          <div>
+          {/* DISABLED: Right Column - Technical Debt Calculator */}
+          {/* <div>
             <TechnicalDebtCalculator />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

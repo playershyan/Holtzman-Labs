@@ -53,7 +53,8 @@ export default function Hero() {
         {/* Left: Headline & CTAs */}
         <div>
           <h1 className="text-[2.2rem] leading-[1.05] md:text-5xl md:leading-[1.06] lg:text-6xl lg:leading-[1.03] font-bold text-black tracking-tight mb-6">
-            Software development for{' '}
+            Software development for
+            <br />
             <span className="terminal-hero">
               <span className="font-mono">{displayedText}</span>
               <span className="caret" />

@@ -59,9 +59,37 @@
   box-shadow: 0 8px 24px rgba(2,6,23,0.5);
   position: relative;
   font-size: inherit;
-  margin-left: 0.25rem;
   min-height: 1.2em;
+  min-width: 420px;
+  justify-content: flex-start;
 }
+
+/* Adjust font size for long text to prevent line breaks */
+.terminal-hero .font-mono {
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .terminal-hero {
+    min-width: 320px;
+  }
+  .terminal-hero .font-mono {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-hero {
+    min-width: 280px;
+    padding: 0.4rem 0.8rem;
+  }
+  .terminal-hero .font-mono {
+    font-size: 0.7em;
+  }
+}
+
 .terminal-hero .caret {
   display: inline-block;
   width: 0.15em;
