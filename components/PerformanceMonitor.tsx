@@ -164,7 +164,7 @@ export default function PerformanceMonitor() {
             ● System Status: <span className="font-bold">OPERATIONAL</span>
           </div>
           <div className="text-gray-500 text-xs mt-1">
-            Zero Bloat™ architecture running in production
+            Zero bloat architecture running in production
           </div>
         </div>
       </div>
@@ -172,7 +172,7 @@ export default function PerformanceMonitor() {
       {/* Info Footer */}
       <div className="px-4 pb-4 bg-[#07101a] border-t border-[#0b1220]">
         <div className="text-xs text-gray-500">
-          <span className="text-gray-400">💡 Tip:</span> These metrics represent our production-grade infrastructure.
+          <span className="text-gray-400">Tip:</span> These metrics represent our production-grade infrastructure.
           <span className="text-indigo-400 ml-1">Real-time monitoring</span> is part of our operational excellence standard.
         </div>
       </div>

@@ -12,52 +12,28 @@ export default function EngineeringPhilosophy() {
         <div className="max-w-3xl">
           {/* Left Column: Philosophy & Principles */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Built on Principle, Not Compromise
-            </h2>
+            <div className="mb-10">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight mb-3">
+                A website is not a luxury or a branding exercise.
+              </p>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight mb-3">
+                It is proof of existence.
+              </p>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight mb-3">
+                It is credibility.
+              </p>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight mb-8">
+                It is defence against competitors who look more established than they actually are.
+              </p>
+            </div>
 
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              We don't just write code—we architect solutions. When a requirement
-              threatens stability, security, or scalability, we push back with
-              superior alternatives. We're your technical partner, not a passive vendor.
-            </p>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#5B21B6] flex items-center justify-center text-white text-sm font-bold">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="font-bold text-black">Direct Expertise</h3>
-                  <p className="text-sm text-gray-600">
-                    Work with senior engineers, no middlemen
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#5B21B6] flex items-center justify-center text-white text-sm font-bold">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="font-bold text-black">Zero Bloat</h3>
-                  <p className="text-sm text-gray-600">
-                    Clean code that minimizes costs, maximizes speed
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-3">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#5B21B6] flex items-center justify-center text-white text-sm font-bold">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="font-bold text-black">Ownership</h3>
-                  <p className="text-sm text-gray-600">
-                    Your product's success is our performance metric
-                  </p>
-                </div>
-              </div>
+            <div className="mb-8 border-l-4 border-[#7C3AED] pl-6">
+              <p className="text-xl md:text-2xl text-gray-800 font-semibold leading-relaxed mb-2">
+                We build simple, functional websites that do one thing only:
+              </p>
+              <p className="text-xl md:text-2xl text-gray-800 font-semibold leading-relaxed">
+                make your business look legitimate and reachable when it matters.
+              </p>
             </div>
 
             <Link

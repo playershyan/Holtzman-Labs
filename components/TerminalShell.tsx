@@ -25,7 +25,7 @@ export default function TerminalShell(){
 
           <div className="ml-auto flex items-center gap-3 terminal-nav">
             <Link href="/" className="terminal-link">Home</Link>
-            <Link href="/playground" className="terminal-link">Playground</Link>
+            <Link href="/siteStats" className="terminal-link">Site Stats</Link>
             <Link href="/pricing" className="terminal-link">Pricing</Link>
             <Link href="/contact" className="terminal-link">Contact</Link>
             <span className="blink-caret">█</span>

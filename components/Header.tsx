@@ -27,8 +27,8 @@ export default function Header({ hideDesktopNav = false }: { hideDesktopNav?: bo
             Our Work
           </Link>
 
-          <Link href="/playground" className="hover:text-[#8B5CF6] transition-colors">
-            Playground
+          <Link href="/siteStats" className="hover:text-[#8B5CF6] transition-colors">
+            Site Stats
           </Link>
 
           <Link href="/about" className="hover:text-[#8B5CF6] transition-colors">
@@ -69,8 +69,8 @@ export default function Header({ hideDesktopNav = false }: { hideDesktopNav?: bo
               Our Work
             </Link>
 
-            <Link href="/playground" className="hover:text-[#8B5CF6] transition-colors">
-              Playground
+            <Link href="/siteStats" className="hover:text-[#8B5CF6] transition-colors">
+              Site Stats
             </Link>
             <Link href="/about" className="hover:text-[#8B5CF6] transition-colors">
               About

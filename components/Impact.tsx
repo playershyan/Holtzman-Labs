@@ -47,7 +47,7 @@ export default function Impact() {
             </div>
 
             <div className="mt-4 flex gap-3">
-              <a href="/playground" className="inline-flex items-center px-4 py-2 gradient-cta text-sm font-semibold">See a live demo</a>
+              <a href="/siteStats" className="inline-flex items-center px-4 py-2 gradient-cta text-sm font-semibold">See a live demo</a>
               <a href="/contact" className="text-sm text-gray-600">Request case brief</a>
             </div>
           </div>

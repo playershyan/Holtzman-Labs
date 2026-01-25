@@ -65,7 +65,7 @@ export default function EngineRoom(){
             </div>
 
             <div className="flex gap-3">
-              <Link href="/playground" className="gradient-cta px-4 py-2 font-semibold inline-flex items-center">Try a live demo</Link>
+              <Link href="/siteStats" className="gradient-cta px-4 py-2 font-semibold inline-flex items-center">Try a live demo</Link>
               <Link href="/contact" className="px-4 py-2 border border-white/10 rounded-md text-sm">Get an estimate</Link>
             </div>
           </div>

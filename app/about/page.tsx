@@ -18,7 +18,7 @@ export default function AboutPage() {
               About Holtzman Labs
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-800 font-medium leading-relaxed max-w-4xl">
-              Holtzman Labs is a specialized engineering consultancy focused on architectural precision and high-fidelity software development. We exist to eliminate technical debt before it begins.
+              Holtzman Labs is a web development consultancy specializing in architectural precision and high‑fidelity implementation. Our objective is to prevent technical debt at the source.
             </p>
           </div>
         </section>
@@ -28,14 +28,11 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-lg p-8 md:p-12 lg:p-16 shadow-sm border border-gray-100">
               <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
-                The Philosophy: Engineering Over Obedience
+                Approach
               </h2>
               <div className="space-y-4 text-lg md:text-xl text-gray-700 leading-relaxed">
                 <p>
-                  We are not a passive vendor. We operate as a <strong className="text-black">technical partner</strong>. We do not just say "yes" to bad ideas; we push back and offer architectural consulting.
-                </p>
-                <p>
-                  If a requirement compromises the stability, security, or scalability of your product, we will challenge it and provide a superior alternative. We build software to last, not just to meet a deadline.
+                  We function as a technical partner rather than a vendor. Requirements that compromise stability, security, or scalability are challenged and replaced with superior alternatives. The priority is durable software, not short‑term delivery.
                 </p>
               </div>
             </div>
@@ -91,46 +88,6 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   Taking over failing or buggy projects and refactoring them for stability.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* The Holtzman Standard Section */}
-        <section className="px-6 py-16 md:px-16 md:py-24 lg:px-24 bg-gradient-to-b from-white to-[#f8f5ff]">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-12">
-              The Holtzman Standard
-            </h2>
-            <div className="space-y-8">
-              {/* Direct Expertise */}
-              <div className="bg-white rounded-lg p-8 md:p-10 border border-gray-200 shadow-sm">
-                <h3 className="text-2xl font-bold text-black mb-4">
-                  Direct Expertise
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  You work directly with senior engineering talent. No account managers, no translation layers.
-                </p>
-              </div>
-
-              {/* Zero Bloat */}
-              <div className="bg-white rounded-lg p-8 md:p-10 border border-gray-200 shadow-sm">
-                <h3 className="text-2xl font-bold text-black mb-4">
-                  Zero Bloat
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  We write clean, efficient code that minimizes server costs and maximizes speed.
-                </p>
-              </div>
-
-              {/* Ownership */}
-              <div className="bg-white rounded-lg p-8 md:p-10 border border-gray-200 shadow-sm">
-                <h3 className="text-2xl font-bold text-black mb-4">
-                  Ownership
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  We treat your product's success as our metric of performance.
                 </p>
               </div>
             </div>

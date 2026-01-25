@@ -24,24 +24,52 @@ export default function OurWorkPage() {
   const highlightProjects: Project[] = [
     {
       id: '1',
-      title: 'E-Commerce Platform',
-      shortDescription: 'Full-stack e-commerce solution with real-time inventory and payment processing.',
-      description: `A comprehensive e-commerce platform built for a mid-sized retail client. The system handles real-time inventory management, secure payment processing, and automated order fulfillment.
+      title: 'Vera.lk - Vehicle Marketplace Platform',
+      shortDescription: 'Comprehensive vehicle marketplace platform for the Sri Lankan market with advanced promotions and messaging.',
+      description: `About
 
-Key Features:
-• Real-time inventory synchronization across multiple warehouses
-• Stripe integration for payment processing
-• Admin dashboard with sales analytics
-• Customer portal with order tracking
-• Automated email notifications
+A comprehensive vehicle marketplace platform built for the Sri Lankan market. The system connects buyers and sellers across 10+ vehicle categories, featuring advanced promotion systems, real-time messaging, and business profiles for professional dealers. Built with performance and security as core priorities.
 
-Challenges Solved:
-• Reduced cart abandonment by 32% through optimized checkout flow
-• Improved page load speed from 4.2s to 0.8s
-• Scaled to handle 10,000+ concurrent users during peak sales`,
+Key Features
+
+• Multi-category listings - Support for cars, SUVs, vans, three-wheelers, motorcycles, heavy-duty vehicles, and property
+• Wanted requests system - Buyers post requirements, sellers contact directly with matching inventory
+• 4-tier promotion system - Featured listings (Rs. 5,000/30d), Top Ads (Rs. 2,500/7d), Urgent tags, Daily Refresh with fair rotation algorithm
+• Real-time messaging - Buyer-seller communication with structured offer management and counter-offers
+• Business profiles - Enhanced dealer accounts with verification badges, operating hours, and branding
+• Phone verification - OTP-based verification via Text.lk SMS gateway (10-minute expiry, 3 attempts)
+• Image optimization - Cloudinary integration with WebP/AVIF support, responsive URLs, automatic format detection
+• Admin dashboard - Role-based moderation (admin/moderator/reviewer), bulk import, activity logging
+• Deletion safety - 30-day grace period with backup/restore capabilities and admin approval workflow
+
+Challenges Solved
+
+• Achieved 76% database performance improvement - Reduced from 157 warnings to 37 through RLS optimization (O(n) → O(1) via SELECT auth.uid() caching)
+• Fair promotion distribution - Implemented rotation algorithm ensuring equal exposure across competing ads using impression tracking and hourly cycles
+• Eliminated duplicate listings - 24-hour duplicate detection using composite index (user_id, make, model, year, created_at) for O(1) lookups
+• Scaled promotion system - Concurrent-safe rotation using FOR UPDATE SKIP LOCKED to handle simultaneous requests
+• Comprehensive audit trail - Full activity logging across 45 database tables for compliance and security
+• Multi-provider authentication - Email/password, Google OAuth, and phone OTP with session management across devices
+
+Technology Stack
+
+Frontend & Backend: Next.js 14 (App Router), TypeScript, React 18
+Database & Storage: Supabase (PostgreSQL 17.4), Row Level Security (RLS), 42 migration files
+External Services: Cloudinary (image processing), Text.lk SMS Gateway, Google Gemini AI, Sentry (monitoring), Upstash Redis (rate limiting)
+Infrastructure: Vercel (standalone deployment), ISR caching (120s listings, 30s wanted), Capacitor (mobile app)
+Security & Performance: Rate limiting (7 tiers: auth, api, search, upload, messaging, AI, admin), CSRF protection, reCAPTCHA (v2/v3), 4 critical composite indexes, 12+ database functions, 76% performance optimization
+Testing: Jest (70% coverage threshold), React Testing Library, Playwright (E2E)
+
+Metrics:
+- 45 database tables with 100% RLS coverage
+- 90+ API endpoints with full documentation
+- 6 major features (listings, wanted, promotions, messaging, business, admin)
+- 10+ vehicle categories supported
+- 4-tier promotion system with rotation
+- 30-day deletion safety with restore`,
       image: '/projects/veratemplate.jpg',
-      technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'Redis', 'Vercel'],
-      liveUrl: 'https://example.com',
+      technologies: ['Next.js 14', 'TypeScript', 'Supabase', 'PostgreSQL', 'Cloudinary', 'Vercel', 'React 18', 'Redis'],
+      liveUrl: 'https://vera.lk',
       githubUrl: '',
       category: 'project'
     },
@@ -99,169 +127,171 @@ Performance Metrics:
   const templates: Project[] = [
     {
       id: 't1',
-      title: 'SaaS Starter Kit',
-      shortDescription: 'Production-ready SaaS boilerplate with authentication, payments, and admin panel.',
-      description: `Complete SaaS starter template that eliminates months of development time. Includes everything needed to launch a subscription-based product.
+      title: 'Aurium.lk - Jewelry E-Commerce Platform',
+      shortDescription: 'E-commerce platform for premium jewelry and gemstones in Sri Lanka.',
+      description: `About
 
-What's Included:
-• User authentication (email, OAuth, magic links)
-• Stripe subscription billing (monthly/annual plans)
-• Admin dashboard with user management
-• Email system (transactional & marketing)
-• Multi-tenancy support
-• Role-based permissions
-• API with rate limiting
-• Comprehensive documentation
+E-commerce platform for premium jewelry and gemstones in Sri Lanka (Aurium.lk). Online catalog system for fine jewelry including rings, necklaces, earrings, bracelets, watches, and certified gemstones.
 
-Technical Stack:
-• Frontend: Next.js 15 with App Router
-• Backend: tRPC for type-safe APIs
-• Database: PostgreSQL with Prisma ORM
-• Auth: NextAuth.js
-• Payments: Stripe
-• Emails: React Email + Resend
-• Deployment: Vercel
+Key Features:
+• Product catalog with material specifications (gold/silver/platinum purity, gemstone types)
+• Shopping cart and wishlist management
+• Order processing with multiple payment methods (PayHere gateway for LKR)
+• Product reviews and ratings
+• Advanced filtering (material, purity, gemstone, price, certification)
+• Certification tracking (GIA certified diamonds, BIS hallmarked gold)
+• Newsletter subscription
+• Mobile app support via Capacitor (Android build configured)
+• Trust badges and secure payment indicators
 
-Perfect For:
-• B2B SaaS products
-• Subscription-based services
-• Multi-tenant applications`,
+Challenges Solved:
+
+Note: Database migrations reference legacy vehicle marketplace optimization work (RLS policy optimizations, rotation algorithms). Current jewelry implementation uses mock data pending full database integration.
+
+Technology Stack
+
+Next.js 14 (App Router), TypeScript, Supabase (PostgreSQL), Tailwind CSS, PayHere, Cloudinary, Capacitor, Radix UI, Vercel`,
       image: '/projects/auriumtemplate.jpg',
-      technologies: ['Next.js', 'TypeScript', 'Prisma', 'Stripe', 'NextAuth.js', 'tRPC'],
-      liveUrl: 'https://example.com',
+      technologies: ['Next.js 14', 'TypeScript', 'Supabase', 'Tailwind CSS', 'PayHere', 'Cloudinary', 'Capacitor', 'Vercel'],
+      liveUrl: 'https://aurium-one.vercel.app/',
       githubUrl: 'https://github.com',
       category: 'template'
     },
     {
       id: 't2',
-      title: 'Portfolio & Blog Template',
-      shortDescription: 'Modern portfolio template with built-in blog and CMS.',
-      description: `Beautiful, performance-optimized portfolio template perfect for developers, designers, and agencies. Includes a full-featured blog with MDX support.
+      title: 'Gym & Fitness Website Template',
+      shortDescription: 'Modern, responsive single-page gym website with smooth animations and dynamic navigation.',
+      description: `About
 
-Features:
-• Responsive portfolio showcase
-• MDX-powered blog with syntax highlighting
-• Contact form with spam protection
-• SEO optimized with Open Graph support
-• Dark mode toggle
-• RSS feed generation
-• Analytics integration (Plausible/GA4)
-• Newsletter signup integration
+A modern, responsive gym and fitness website template designed as a single-page application. The site provides an engaging user experience with smooth animations, dynamic navigation, and comprehensive sections showcasing gym services, class schedules, and membership packages.
 
-Content Management:
-• Write posts in MDX (Markdown + React components)
-• Automatic image optimization
-• Code syntax highlighting with multiple themes
-• Table of contents generation
-• Reading time estimates
+Key Features:
+• Responsive single-page design with smooth scroll navigation
+• Animated hero section with call-to-action
+• Interactive accordion UI for service information
+• Dynamic class schedule with weekly timetable
+• Tiered pricing packages ($59, $69, $99/month)
+• Workout gallery with responsive image grid
+• Contact form with social media integration
+• WOW.js scroll animations for enhanced visual appeal
+• Mobile-optimized hamburger navigation menu
 
-Performance:
-• 100/100 Lighthouse score
-• <1s time to interactive
-• Optimized images with blur-up loading
-• Static generation for blazing speed
+Challenges Solved:
+• Created seamless navigation without page refreshes for better UX
+• Implemented responsive design that adapts to all screen sizes
+• Optimized social media sharing with custom OG image generation
+• Built modular sections for easy customization and branding
 
-Ideal For:
-• Personal portfolios
-• Developer blogs
-• Agency showcases
-• Technical documentation sites`,
+Technology Stack
+
+HTML5, CSS3, JavaScript (ES5+), jQuery, WOW.js (Animate.css), Puppeteer (OG image generation), Vercel (Deployment)`,
       image: '/projects/gym1template.jpg',
-      technologies: ['Next.js', 'MDX', 'Tailwind CSS', 'ContentLayer', 'Framer Motion'],
-      liveUrl: 'https://example.com',
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'WOW.js', 'Puppeteer', 'Vercel'],
+      liveUrl: 'https://gym-demo-1-tau.vercel.app/',
       githubUrl: 'https://github.com',
       category: 'template'
     },
     {
       id: 't3',
-      title: 'E-Commerce Storefront',
-      shortDescription: 'High-performance e-commerce template with cart, checkout, and admin.',
-      description: `Modern e-commerce storefront template built for speed and conversions. Includes everything needed to start selling online.
+      title: 'BEROTOT - Responsive Gym Website',
+      shortDescription: 'Modern, fully responsive gym website with BMI calculator and interactive health tools.',
+      description: `About
 
-Store Features:
-• Product catalog with search and filters
-• Shopping cart with real-time updates
-• Guest and user checkout flows
-• Order tracking and history
-• Wishlist functionality
-• Product reviews and ratings
-• Related products recommendations
+A modern, fully responsive gym website designed to showcase fitness programs, membership pricing, and interactive health tools. Built with mobile-first methodology, the site provides an engaging user experience across all devices with smooth scroll animations and interactive features.
 
-Admin Panel:
-• Product management (CRUD operations)
-• Order management and fulfillment
-• Customer management
-• Inventory tracking
-• Sales analytics dashboard
-• Discount code management
+Key Features:
+• Mobile-first responsive design optimized for all screen sizes
+• Interactive BMI (Body Mass Index) calculator with health status feedback
+• Email subscription form for member registration and updates
+• Smooth scroll reveal animations throughout the site
+• Dynamic navigation with active section highlighting
+• Three-tier membership pricing system (Basic, Premium, Diamond)
+• Four specialized fitness programs (Flex Muscle, Cardio Exercise, Basic Yoga, Weight Lifting)
+• Social media integration (Facebook, Twitter, Instagram)
+• Scroll-to-top button for improved navigation
+• Dynamic header that changes on scroll
 
-Integrations:
-• Payment: Stripe Checkout
-• Shipping: Shippo API
-• Email: Automated order confirmations
-• Search: Algolia (optional)
+Challenges Solved:
+• Created seamless mobile navigation with toggle menu for optimal mobile UX
+• Implemented real-time BMI calculation with instant health status feedback
+• Designed engaging scroll animations that enhance user experience without impacting performance
+• Built flexible pricing system that clearly presents membership options
+• Optimized asset loading for fast page performance across all devices
 
-Optimizations:
-• Image lazy loading and WebP support
-• Progressive Web App (PWA) capabilities
-• Server-side rendering for SEO
-• Optimistic UI updates for cart
+Technology Stack
 
-Best For:
-• Online stores
-• Drop-shipping businesses
-• Digital product sales
-• Print-on-demand shops`,
-      image: '',
-      technologies: ['Next.js', 'TypeScript', 'Stripe', 'Prisma', 'PostgreSQL', 'Tailwind CSS'],
-      liveUrl: 'https://example.com',
+HTML5, CSS3, JavaScript (ES6+), ScrollReveal.js, RemixIcon, Vercel (Deployment)`,
+      image: '/projects/gym-demo-2-ten.vercel.app_.jpg',
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'ScrollReveal.js', 'RemixIcon', 'Vercel'],
+      liveUrl: 'https://gym-demo-2-ten.vercel.app',
       githubUrl: 'https://github.com',
       category: 'template'
     },
     {
       id: 't4',
-      title: 'Admin Dashboard Template',
-      shortDescription: 'Feature-rich admin dashboard with charts, tables, and forms.',
-      description: `Comprehensive admin dashboard template with pre-built components for common admin tasks. Save weeks of development time.
+      title: 'Fitness & Wellness Platform',
+      shortDescription: 'Comprehensive fitness platform with class schedules, trainers, and membership plans.',
+      description: `About
 
-Dashboard Features:
-• Customizable dashboard widgets
-• Advanced data tables with sorting, filtering, pagination
-• Multiple chart types (line, bar, pie, donut, area)
-• Form builder with validation
-• File upload with drag-and-drop
-• User management interface
-• Settings and configuration panels
+A comprehensive fitness and wellness platform built for a modern gym facility. The website provides complete information about gym services, classes, trainers, and membership plans with an engaging, responsive user interface designed to attract and retain fitness enthusiasts.
 
-Components Library:
-• 50+ pre-built UI components
-• Consistent design system
-• Accessible (WCAG 2.1 compliant)
-• Responsive across all devices
-• Dark mode support
+Key Features:
+• Multiple fitness class offerings (Weightlifting, Indoor Cycling, Kettlebell Power, Boxing)
+• Interactive BMI calculator for personalized fitness assessment
+• Dynamic class timetable with scheduling information
+• Professional trainer profiles and team showcase
+• Flexible membership pricing plans (Drop-in, 6-month, 12-month unlimited)
+• Interactive image gallery showcasing facilities and equipment
+• Blog section with fitness tips and health guides
+• Integrated contact form and appointment booking system
 
-Data Visualization:
-• Recharts for interactive charts
-• Real-time data updates
-• Export data to CSV/Excel
-• Custom date range selection
-• Drill-down analytics
+Challenges Solved:
+• Created an engaging, mobile-responsive interface for fitness enthusiasts
+• Organized complex class and scheduling information intuitively
+• Showcased gym facilities through interactive gallery with lightbox
+• Simplified membership selection with clear pricing tiers and features
+• Implemented smooth navigation with multi-page architecture
 
-Authentication & Security:
-• Role-based access control (RBAC)
-• Protected routes
-• Session management
-• Audit logs
-• Two-factor authentication support
+Technology Stack
 
-Perfect For:
-• Internal tools
-• Business dashboards
-• CRM systems
-• Analytics platforms`,
-      image: '',
-      technologies: ['React', 'TypeScript', 'Recharts', 'Shadcn UI', 'React Query', 'Zustand'],
-      liveUrl: 'https://example.com',
+HTML5, CSS3 (Bootstrap), JavaScript (jQuery), Owl Carousel, Magnific Popup, Font Awesome, Google Fonts`,
+      image: '/projects/gym-demo-3-ten.vercel.app_.jpg',
+      technologies: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'jQuery', 'Owl Carousel', 'Font Awesome'],
+      liveUrl: 'https://gym-demo-3-teal.vercel.app/',
+      githubUrl: 'https://github.com',
+      category: 'template'
+    },
+    {
+      id: 't5',
+      title: 'Global Burger Hub',
+      shortDescription: 'Modern restaurant website with online ordering, real-time cart management, and PWA functionality.',
+      description: `About
+
+A modern restaurant website for Global Burger Hub, featuring a seamless online ordering experience with real-time cart management and responsive design. Built as a Progressive Web App (PWA) for enhanced mobile experience and offline capabilities.
+
+Key Features:
+• Interactive menu browsing with dynamic filtering system
+• Shopping cart with persistent state using localStorage
+• Real-time order total calculation
+• Contact form for customer inquiries
+• Specialty items showcase with smooth animations
+• Fully responsive design optimized for mobile and desktop
+• PWA functionality with service worker for offline access
+• Open Graph meta tags for enhanced social media sharing
+
+Challenges Solved:
+• Implemented client-side state management for seamless cart experience
+• Created smooth animations using Framer Motion for modern UX
+• Built PWA capabilities for app-like mobile experience
+• Optimized images and performance with Next.js Image component
+• Designed intuitive filtering system for easy menu navigation
+
+Technology Stack
+
+Next.js 14, TypeScript, Tailwind CSS, Framer Motion, React Context API, Vercel`,
+      image: '/projects/restaurant-demo-2.jpg',
+      technologies: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React Context API', 'Vercel'],
+      liveUrl: 'https://restaurant-demo-2-umber.vercel.app/',
       githubUrl: 'https://github.com',
       category: 'template'
     }

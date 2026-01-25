@@ -25,7 +25,7 @@ export default function ViewWork() {
             Work
           </h2>
           <a
-            href="/playground"
+            href="/siteStats"
             className="text-lg font-semibold text-[#8B5CF6] hover:text-[#7C3AED] transition-colors hidden sm:block"
           >
             See live demos →
@@ -44,7 +44,7 @@ export default function ViewWork() {
           }
         </div>
         <a
-          href="/playground"
+          href="/siteStats"
           className="mt-8 text-lg font-semibold text-[#8B5CF6] hover:text-[#7C3AED] transition-colors sm:hidden block text-center"
         >
           See live demos →
