@@ -41,9 +41,6 @@ export default function Contact() {
               <h1 className="text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl font-bold text-black tracking-tight mb-4 md:mb-6">
                 Start a scoped estimate
               </h1>
-              <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl text-gray-800 mb-6 max-w-xl">
-                Tell us the outcome you need — we’ll reply within 24 hours with a clear, fixed proposal.
-              </p>
 
               <div className="space-y-6 md:space-y-8">
                 <div>
@@ -54,6 +51,28 @@ export default function Contact() {
                   >
                     hello@holtzmanlabs.com
                   </a>
+                </div>
+
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-700 mb-2">Phone</h3>
+                  <p className="text-gray-800 text-base md:text-lg mb-2">+94 70 437 9967</p>
+                  <div className="flex flex-wrap gap-3">
+                    <a
+                      href="https://wa.me/94704379967"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#8B5CF6] hover:text-[#7C3AED] transition-colors text-base md:text-lg"
+                    >
+                      Chat on WhatsApp
+                    </a>
+                    <span className="text-gray-400">•</span>
+                    <a
+                      href="tel:+94704379967"
+                      className="text-[#8B5CF6] hover:text-[#7C3AED] transition-colors text-base md:text-lg"
+                    >
+                      Call
+                    </a>
+                  </div>
                 </div>
 
                 <div>
@@ -68,7 +87,7 @@ export default function Contact() {
             </div>
 
             {/* Right Column - Form */}
-            <div className="bg-gray-50 p-6 md:p-8 lg:p-12">
+            <div className="bg-gray-50 p-6 md:p-8 lg:p-12 rounded-md">
               <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
                 <div>
                   <label
@@ -84,7 +103,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2.5 md:px-4 md:py-3 text-base border-2 border-gray-300 focus:outline-none focus:border-[#8B5CF6] bg-white transition-colors"
+                    className="w-full px-3 py-2.5 md:px-4 md:py-3 text-base border-2 border-gray-300 focus:outline-none focus:border-[#8B5CF6] bg-white transition-colors rounded-md"
                   />
                 </div>
 
@@ -102,7 +121,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2.5 md:px-4 md:py-3 text-base border-2 border-gray-300 focus:outline-none focus:border-[#8B5CF6] bg-white transition-colors"
+                    className="w-full px-3 py-2.5 md:px-4 md:py-3 text-base border-2 border-gray-300 focus:outline-none focus:border-[#8B5CF6] bg-white transition-colors rounded-md"
                   />
                 </div>
 
@@ -119,7 +138,7 @@ export default function Contact() {
                     value={formData.service}
                     onChange={handleChange}
                     required
-                    className="w-full px-3 py-2.5 md:px-4 md:py-3 text-base border-2 border-gray-300 focus:outline-none focus:border-[#8B5CF6] bg-white transition-colors"
+                    className="w-full px-3 py-2.5 md:px-4 md:py-3 text-base border-2 border-gray-300 focus:outline-none focus:border-[#8B5CF6] bg-white transition-colors rounded-md"
                   >
                     <option value="">Select a service</option>
                     <option value="landing">Landing Page</option>
@@ -143,14 +162,14 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-3 py-2.5 md:px-4 md:py-3 text-base border-2 border-gray-300 focus:outline-none focus:border-[#8B5CF6] bg-white resize-none transition-colors"
+                    className="w-full px-3 py-2.5 md:px-4 md:py-3 text-base border-2 border-gray-300 focus:outline-none focus:border-[#8B5CF6] bg-white resize-none transition-colors rounded-md"
                     placeholder="Briefly: outcome, timeline, budget (optional)"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 md:px-8 md:py-4 text-base md:text-base bg-[var(--color-primary)] text-white font-semibold hover:brightness-105 transition-colors focus-visible:outline-none"
+                  className="w-full px-6 py-3 md:px-8 md:py-4 text-base md:text-base bg-[var(--color-primary)] text-white font-semibold hover:brightness-105 transition-colors focus-visible:outline-none rounded-md"
                 >
                   Request estimate
                 </button> 

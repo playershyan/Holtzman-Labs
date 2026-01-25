@@ -13,7 +13,6 @@ export default function SiteStatsPage() {
       <main className="py-24 px-6 lg:px-12">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl lg:text-5xl font-semibold mb-4">Site Stats</h1>
-          <p className="text-lg text-gray-500 mb-8">Website statistics and metrics.</p>
 
           <div className="max-w-2xl mx-auto">
             <PerformanceMonitor />

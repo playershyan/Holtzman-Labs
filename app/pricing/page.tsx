@@ -12,8 +12,8 @@ export default function Pricing() {
   const services = [
     {
       name: "Landing Page",
-      priceUSD: "$250",
-      priceLKR: "75,000",
+      priceUSD: "$150 - $250",
+      priceLKR: "50K - 75K",
       delivery: "5 days",
       features: [
         "High-converting single page",
@@ -23,24 +23,26 @@ export default function Pricing() {
     },
     {
       name: "Static Website",
-      priceUSD: "$500",
-      priceLKR: "150,000",
+      priceUSD: "$250 - $500",
+      priceLKR: "75K - 150K",
       delivery: "2 weeks",
       features: [
         "Up to 7 pages",
         "SEO & performance",
+        "Mobile optimization",
         "Optional CMS",
       ],
       highlighted: true,
     },
     {
       name: "Website Redesign",
-      priceUSD: "$400",
-      priceLKR: "120,000",
+      priceUSD: "$300 - $350",
+      priceLKR: "85K - 100K",
       delivery: "10 days",
       features: [
         "Design refresh",
         "Improved UX",
+        "Mobile optimization",
         "Content migration",
       ],
     },
@@ -89,7 +91,7 @@ export default function Pricing() {
               {services.map((service) => (
                 <div
                   key={service.name}
-                  className={`p-6 md:p-8 border-2 ${
+                  className={`p-6 md:p-8 border-2 rounded-md ${
                     service.highlighted
                       ? "border-[#8B5CF6] bg-purple-50"
                       : "border-gray-200 bg-white"
@@ -121,7 +123,7 @@ export default function Pricing() {
 
                   <Link
                     href="/contact"
-                    className={`block text-center px-8 py-4 font-semibold transition-colors ${
+                    className={`block text-center px-8 py-4 font-semibold transition-colors rounded-md ${
                       service.highlighted
                         ? "bg-[#8B5CF6] text-white hover:bg-[#7C3AED]"
                         : "border-2 border-black text-black hover:bg-gray-50"

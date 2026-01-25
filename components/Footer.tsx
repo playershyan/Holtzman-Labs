@@ -16,9 +16,6 @@ export default function Footer() {
               Holtzman Labs
             </span>
           </Link>
-          <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl text-gray-600 max-w-xl">
-            Engineering, shipped fast.
-          </p>
         </div>
 
         {/* Contact Information */}

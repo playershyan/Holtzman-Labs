@@ -10,7 +10,7 @@ export default function Hero() {
           <h1 className="text-[2.2rem] leading-[1.05] md:text-5xl md:leading-[1.06] lg:text-6xl lg:leading-[1.03] font-bold text-black tracking-tight mb-6">
             Web development for
             <br />
-            <span className="font-mono">businesses & professional services</span>
+            <span className="font-mono text-[#8B5CF6]">businesses & professional services</span>
           </h1>
 
           <p className="text-lg leading-relaxed md:text-xl md:leading-relaxed lg:text-2xl text-gray-800 font-medium mb-8 max-w-2xl">

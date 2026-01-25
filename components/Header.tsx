@@ -47,13 +47,15 @@ export default function Header({ hideDesktopNav = false }: { hideDesktopNav?: bo
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="sm:hidden inline-flex items-center justify-center rounded-md p-2 text-neutral-700 hover:bg-neutral-100"
+          className="sm:hidden inline-flex flex-col items-center justify-center gap-1.5 rounded-md p-2 text-neutral-700 hover:bg-neutral-100"
           onClick={() => setOpen((prev) => !prev)}
+          aria-label="Toggle menu"
+          aria-expanded={open}
         >
           <span className="sr-only">Open main menu</span>
-          <span className="block h-0.5 w-5 bg-neutral-900" />
-          <span className="mt-1 block h-0.5 w-5 bg-neutral-900" />
-          <span className="mt-1 block h-0.5 w-5 bg-neutral-900" />
+          <span className={`block h-0.5 w-5 bg-neutral-900 transition-all ${open ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block h-0.5 w-5 bg-neutral-900 transition-all ${open ? 'opacity-0' : ''}`} />
+          <span className={`block h-0.5 w-5 bg-neutral-900 transition-all ${open ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
 
