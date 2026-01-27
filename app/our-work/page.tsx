@@ -26,7 +26,7 @@ export default function OurWorkPage() {
       id: '1',
       title: 'Vera.lk - Vehicle Marketplace Platform',
       shortDescription: 'Comprehensive vehicle marketplace platform for the Sri Lankan market with advanced promotions and messaging.',
-      description: `About
+      description: `🚧 DEVELOPMENT NOTICE: This project is currently in active development. You may encounter errors or incomplete features while exploring the platform.
 
 A comprehensive vehicle marketplace platform built for the Sri Lankan market. The system connects buyers and sellers across 10+ vehicle categories, featuring advanced promotion systems, real-time messaging, and business profiles for professional dealers. Built with performance and security as core priorities.
 
@@ -129,9 +129,7 @@ Metrics:
       id: 't1',
       title: 'Aurium.lk - Jewelry E-Commerce Platform',
       shortDescription: 'E-commerce platform for premium jewelry and gemstones in Sri Lanka.',
-      description: `About
-
-E-commerce platform for premium jewelry and gemstones in Sri Lanka (Aurium.lk). Online catalog system for fine jewelry including rings, necklaces, earrings, bracelets, watches, and certified gemstones.
+      description: `E-commerce platform for premium jewelry and gemstones in Sri Lanka (Aurium.lk). Online catalog system for fine jewelry including rings, necklaces, earrings, bracelets, watches, and certified gemstones.
 
 Key Features:
 • Product catalog with material specifications (gold/silver/platinum purity, gemstone types)
@@ -151,7 +149,7 @@ Note: Database migrations reference legacy vehicle marketplace optimization work
 Technology Stack
 
 Next.js 14 (App Router), TypeScript, Supabase (PostgreSQL), Tailwind CSS, PayHere, Cloudinary, Capacitor, Radix UI, Vercel`,
-      image: '/projects/auriumtemplate.jpg',
+      image: '/projects/auriumtemplate2.jpg',
       technologies: ['Next.js 14', 'TypeScript', 'Supabase', 'Tailwind CSS', 'PayHere', 'Cloudinary', 'Capacitor', 'Vercel'],
       liveUrl: 'https://aurium-one.vercel.app/',
       githubUrl: 'https://github.com',
@@ -161,9 +159,7 @@ Next.js 14 (App Router), TypeScript, Supabase (PostgreSQL), Tailwind CSS, PayHer
       id: 't2',
       title: 'Gym & Fitness Website Template',
       shortDescription: 'Modern, responsive single-page gym website with smooth animations and dynamic navigation.',
-      description: `About
-
-A modern, responsive gym and fitness website template designed as a single-page application. The site provides an engaging user experience with smooth animations, dynamic navigation, and comprehensive sections showcasing gym services, class schedules, and membership packages.
+      description: `A modern, responsive gym and fitness website template designed as a single-page application. The site provides an engaging user experience with smooth animations, dynamic navigation, and comprehensive sections showcasing gym services, class schedules, and membership packages.
 
 Key Features:
 • Responsive single-page design with smooth scroll navigation
@@ -185,7 +181,7 @@ Challenges Solved:
 Technology Stack
 
 HTML5, CSS3, JavaScript (ES5+), jQuery, WOW.js (Animate.css), Puppeteer (OG image generation), Vercel (Deployment)`,
-      image: '/projects/gym1template.jpg',
+      image: '/projects/gym1template2.jpg',
       technologies: ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'WOW.js', 'Puppeteer', 'Vercel'],
       liveUrl: 'https://gym-demo-1-tau.vercel.app/',
       githubUrl: 'https://github.com',
@@ -195,9 +191,7 @@ HTML5, CSS3, JavaScript (ES5+), jQuery, WOW.js (Animate.css), Puppeteer (OG imag
       id: 't3',
       title: 'BEROTOT - Responsive Gym Website',
       shortDescription: 'Modern, fully responsive gym website with BMI calculator and interactive health tools.',
-      description: `About
-
-A modern, fully responsive gym website designed to showcase fitness programs, membership pricing, and interactive health tools. Built with mobile-first methodology, the site provides an engaging user experience across all devices with smooth scroll animations and interactive features.
+      description: `A modern, fully responsive gym website designed to showcase fitness programs, membership pricing, and interactive health tools. Built with mobile-first methodology, the site provides an engaging user experience across all devices with smooth scroll animations and interactive features.
 
 Key Features:
 • Mobile-first responsive design optimized for all screen sizes
@@ -231,9 +225,7 @@ HTML5, CSS3, JavaScript (ES6+), ScrollReveal.js, RemixIcon, Vercel (Deployment)`
       id: 't4',
       title: 'Fitness & Wellness Platform',
       shortDescription: 'Comprehensive fitness platform with class schedules, trainers, and membership plans.',
-      description: `About
-
-A comprehensive fitness and wellness platform built for a modern gym facility. The website provides complete information about gym services, classes, trainers, and membership plans with an engaging, responsive user interface designed to attract and retain fitness enthusiasts.
+      description: `A comprehensive fitness and wellness platform built for a modern gym facility. The website provides complete information about gym services, classes, trainers, and membership plans with an engaging, responsive user interface designed to attract and retain fitness enthusiasts.
 
 Key Features:
 • Multiple fitness class offerings (Weightlifting, Indoor Cycling, Kettlebell Power, Boxing)
@@ -265,9 +257,7 @@ HTML5, CSS3 (Bootstrap), JavaScript (jQuery), Owl Carousel, Magnific Popup, Font
       id: 't5',
       title: 'Global Burger Hub',
       shortDescription: 'Modern restaurant website with online ordering, real-time cart management, and PWA functionality.',
-      description: `About
-
-A modern restaurant website for Global Burger Hub, featuring a seamless online ordering experience with real-time cart management and responsive design. Built as a Progressive Web App (PWA) for enhanced mobile experience and offline capabilities.
+      description: `A modern restaurant website for Global Burger Hub, featuring a seamless online ordering experience with real-time cart management and responsive design. Built as a Progressive Web App (PWA) for enhanced mobile experience and offline capabilities.
 
 Key Features:
 • Interactive menu browsing with dynamic filtering system
@@ -299,9 +289,7 @@ Next.js 14, TypeScript, Tailwind CSS, Framer Motion, React Context API, Vercel`,
       id: 't6',
       title: 'Law Firm Website Template',
       shortDescription: 'Professional law firm website with practice area management, blog system, and admin dashboard.',
-      description: `About
-
-A professional, full-featured website template built specifically for law firms and legal practices with practice area management, blog publishing, contact forms, and admin dashboard.
+      description: `A professional, full-featured website template built specifically for law firms and legal practices with practice area management, blog publishing, contact forms, and admin dashboard.
 
 Key Features:
 • Dynamic practice area pages with customizable service listings
@@ -339,10 +327,14 @@ Next.js 16, TypeScript, PostgreSQL, Drizzle ORM, Tailwind CSS 4, Vercel Blob, Re
       <main className="py-16 px-6 md:px-16 lg:px-24">
         <div className="max-w-7xl mx-auto">
           {/* Highlight Projects Section */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-black mb-8">
-              Highlight Projects
-            </h2>
+          <section className="mb-20 bg-gradient-to-br from-[#f8f5ff] to-white rounded-xl p-8 md:p-12 border border-[#8B5CF6]">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-3 py-1 bg-[#8B5CF6] text-white text-sm font-semibold rounded-full">Featured</span>
+              <h2 className="text-3xl font-bold text-black">
+                Highlight Projects
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-8">Production applications showcasing real-world implementations</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {highlightProjects.map((project) => (
                 <ProjectCard
@@ -356,9 +348,13 @@ Next.js 16, TypeScript, PostgreSQL, Drizzle ORM, Tailwind CSS 4, Vercel Blob, Re
 
           {/* Templates Section */}
           <section>
-            <h2 className="text-3xl font-bold text-black mb-8">
-              Templates
-            </h2>
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-3xl font-bold text-black">
+                Templates
+              </h2>
+              <div className="h-1 flex-1 bg-gradient-to-r from-gray-300 to-transparent rounded-full"></div>
+            </div>
+            <p className="text-gray-600 mb-8 text-lg">Ready-to-deploy templates for quick project launches</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {templates.map((template) => (
                 <ProjectCard

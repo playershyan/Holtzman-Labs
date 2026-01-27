@@ -79,9 +79,19 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
           {/* Description */}
           <div className="mb-6">
             <h3 className="text-lg font-bold text-black mb-3">About</h3>
-            <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-              {project.description}
-            </p>
+            <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+              {project.description.split('\n\n').map((paragraph, index) => {
+                // Check if paragraph is a development notice
+                if (paragraph.includes('DEVELOPMENT NOTICE') || paragraph.includes('🚧')) {
+                  return (
+                    <div key={index} className="mb-4 p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded-r">
+                      <p className="text-yellow-800 font-semibold">{paragraph}</p>
+                    </div>
+                  );
+                }
+                return <p key={index} className="mb-4">{paragraph}</p>;
+              })}
+            </div>
           </div>
 
           {/* Technology Stack */}
