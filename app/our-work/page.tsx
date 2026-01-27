@@ -72,55 +72,55 @@ Metrics:
       liveUrl: 'https://vera.lk',
       githubUrl: '',
       category: 'project'
-    },
-    {
-      id: '2',
-      title: 'Healthcare Management System',
-      shortDescription: 'HIPAA-compliant patient management system for medical practices.',
-      description: `Enterprise healthcare management system designed for multi-location medical practices. Built with security and compliance as top priorities.
-
-Key Features:
-• Patient records management with audit trails
-• Appointment scheduling with automated reminders
-• Prescription management and e-prescribe integration
-• Billing and insurance claims processing
-• HIPAA-compliant data encryption
-
-Technical Achievements:
-• Zero security incidents since launch
-• 99.98% uptime over 18 months
-• Handles 50,000+ patient records
-• Sub-200ms API response times`,
-      image: '',
-      technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Docker', 'Kubernetes'],
-      liveUrl: '',
-      githubUrl: '',
-      category: 'project'
-    },
-    {
-      id: '3',
-      title: 'Real-Time Analytics Dashboard',
-      shortDescription: 'Live data visualization platform for business intelligence.',
-      description: `Real-time analytics dashboard for a SaaS company serving 5,000+ customers. Processes millions of events per day and provides actionable insights.
-
-Key Features:
-• Real-time event streaming and processing
-• Custom report builder with drag-and-drop interface
-• Automated anomaly detection and alerts
-• Multi-tenant architecture with role-based access
-• Export to PDF, Excel, and CSV
-
-Performance Metrics:
-• Processes 50M+ events daily
-• <100ms query response time for dashboards
-• 99.99% data accuracy
-• Reduced infrastructure costs by 40% through optimization`,
-      image: '',
-      technologies: ['Vue.js', 'Python', 'ClickHouse', 'Apache Kafka', 'GraphQL', 'Tailwind CSS'],
-      liveUrl: 'https://example.com',
-      githubUrl: '',
-      category: 'project'
     }
+    // {
+    //   id: '2',
+    //   title: 'Healthcare Management System',
+    //   shortDescription: 'HIPAA-compliant patient management system for medical practices.',
+    //   description: `Enterprise healthcare management system designed for multi-location medical practices. Built with security and compliance as top priorities.
+
+    // Key Features:
+    // • Patient records management with audit trails
+    // • Appointment scheduling with automated reminders
+    // • Prescription management and e-prescribe integration
+    // • Billing and insurance claims processing
+    // • HIPAA-compliant data encryption
+
+    // Technical Achievements:
+    // • Zero security incidents since launch
+    // • 99.98% uptime over 18 months
+    // • Handles 50,000+ patient records
+    // • Sub-200ms API response times`,
+    //   image: '',
+    //   technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Docker', 'Kubernetes'],
+    //   liveUrl: '',
+    //   githubUrl: '',
+    //   category: 'project'
+    // },
+    // {
+    //   id: '3',
+    //   title: 'Real-Time Analytics Dashboard',
+    //   shortDescription: 'Live data visualization platform for business intelligence.',
+    //   description: `Real-time analytics dashboard for a SaaS company serving 5,000+ customers. Processes millions of events per day and provides actionable insights.
+
+    // Key Features:
+    // • Real-time event streaming and processing
+    // • Custom report builder with drag-and-drop interface
+    // • Automated anomaly detection and alerts
+    // • Multi-tenant architecture with role-based access
+    // • Export to PDF, Excel, and CSV
+
+    // Performance Metrics:
+    // • Processes 50M+ events daily
+    // • <100ms query response time for dashboards
+    // • 99.99% data accuracy
+    // • Reduced infrastructure costs by 40% through optimization`,
+    //   image: '',
+    //   technologies: ['Vue.js', 'Python', 'ClickHouse', 'Apache Kafka', 'GraphQL', 'Tailwind CSS'],
+    //   liveUrl: 'https://example.com',
+    //   githubUrl: '',
+    //   category: 'project'
+    // }
   ];
 
   // Sample Templates
@@ -292,6 +292,41 @@ Next.js 14, TypeScript, Tailwind CSS, Framer Motion, React Context API, Vercel`,
       image: '/projects/restaurant-demo-2.jpg',
       technologies: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'React Context API', 'Vercel'],
       liveUrl: 'https://restaurant-demo-2-umber.vercel.app/',
+      githubUrl: 'https://github.com',
+      category: 'template'
+    },
+    {
+      id: 't6',
+      title: 'Law Firm Website Template',
+      shortDescription: 'Professional law firm website with practice area management, blog system, and admin dashboard.',
+      description: `About
+
+A professional, full-featured website template built specifically for law firms and legal practices with practice area management, blog publishing, contact forms, and admin dashboard.
+
+Key Features:
+• Dynamic practice area pages with customizable service listings
+• Built-in blog system with rich text editor and image uploads
+• Responsive design optimized for all devices
+• SEO-optimized with structured data for better search rankings
+• Admin dashboard for content management
+• Contact form with email notifications
+• Google Maps integration
+• Text-based customizable logo system
+• Performance-optimized with Next.js 16
+
+Challenges Solved:
+• Eliminated WordPress hosting and complex CMS setup
+• Reduced development time from weeks to hours
+• Centralized firm information for easy updates
+• Achieved 95+ Lighthouse performance scores
+• Fully customizable requiring only basic configuration
+
+Technology Stack
+
+Next.js 16, TypeScript, PostgreSQL, Drizzle ORM, Tailwind CSS 4, Vercel Blob, Resend, Iron Session, Tiptap, Vercel, Lucide React`,
+      image: '/projects/law-firm1img2.jpg',
+      technologies: ['Next.js 16', 'TypeScript', 'PostgreSQL', 'Drizzle ORM', 'Tailwind CSS 4', 'Vercel Blob', 'Tiptap'],
+      liveUrl: 'https://law-firm1-6647-i4tiz027h-shyans-projects-7b2901b0.vercel.app/',
       githubUrl: 'https://github.com',
       category: 'template'
     }
